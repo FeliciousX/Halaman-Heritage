@@ -1,4 +1,4 @@
-# Plaza-Merdeka-Mobile-Site
+# Halaman Heritage
 
 Web application for Plaza Merdeka
 
@@ -18,16 +18,9 @@ npm install -g karma
 
 Install [generator-karma] (https://github.com/yeoman/generator-karma) with npm from node:
 ```
-npm install -g generator-karma
+npm install generator-karma
 ```
 
-Download and install [Ruby] (http://rubyinstaller.org/downloads/)
-
-Using Ruby install [compass] (http://compass-style.org/install/)
-```
-gem update --system
-gem install compass
-```
 
 Grunt and Bower package from node.js should be installed along when `generator-angular` and `generator-karma` was installed
 
