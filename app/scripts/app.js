@@ -7,7 +7,11 @@ angular.module('halamanHeritageApp', [])
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/404', {
+        templateUrl 'views/404.html',
+        controller: 'ErrCtrl'
+      })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/404'
       });
   });
