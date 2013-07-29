@@ -8,7 +8,7 @@ angular.module('halamanHeritageApp', [])
         controller: 'MainCtrl'
       })
       .when('/404', {
-        templateUrl 'views/404.html',
+        templateUrl: 'views/404.html',
         controller: 'ErrCtrl'
       })
       .otherwise({
