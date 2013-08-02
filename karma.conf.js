@@ -8,7 +8,10 @@ files = [
   JASMINE,
   JASMINE_ADAPTER,
   'app/bower_components/angular/angular.js',
+  'app/bower_components/angular-ui/build/angular-ui.js',
+  'app/bower_components/angular-bootstrap/ui-bootstrap.js',
   'app/bower_components/angular-mocks/angular-mocks.js',
+  'http://maps.googleapis.com/maps/api/js?sensor=false',
   'app/scripts/*.js',
   'app/scripts/**/*.js',
   'test/mock/**/*.js',
@@ -46,10 +49,10 @@ autoWatch = false;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
-browsers = ['Chrome'];
+browsers = ['PhantomJS'];
 
 // If browser does not capture in given timeout [ms], kill it
-captureTimeout = 5000;
+captureTimeout = 50000;
 
 // Continuous Integration mode
 // if true, it capture browsers, run tests and exit

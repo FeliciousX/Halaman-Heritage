@@ -1,21 +1,22 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: MapsCtrl', function () {
 
   // load the controller's module
   beforeEach(module('halamanHeritageApp'));
 
-  var MainCtrl,
+  var MapsCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
+    MapsCtrl = $controller('MapsCtrl', {
       $scope: scope
     });
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
+    
   });
 });
