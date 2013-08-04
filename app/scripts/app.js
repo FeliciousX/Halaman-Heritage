@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('halamanHeritageApp', ['ui.bootstrap', 'ui'])
+angular.module('halamanHeritageApp', ['ui.bootstrap', 'ui', 'ngResource'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -14,6 +14,10 @@ angular.module('halamanHeritageApp', ['ui.bootstrap', 'ui'])
       .when('/maps', {
         templateUrl: 'views/maps.html',
         controller: 'MapsCtrl'
+      })
+      .when('/category/:categoryId/:placeId', {
+        templateUrl: 'views/categoryDetail.html',
+        controller: 'CategorydetailCtrl'
       })
       .otherwise({
         redirectTo: '/404'
