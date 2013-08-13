@@ -4,7 +4,7 @@
     <input type="text" ng-model="search.$">
   </div>
   <accordion close-others="{{oneAtATime}}">
-    <accordion-group ng-repeat="list in category | filter:search" heading="{{list.category}}">
+    <accordion-group ng-repeat="list in category | filter:search" heading="{{list.category}}" id="clas">
       <ul>
         <li ng-repeat="places in list.places | filter:search">
           <a href="#/category/{{list.category}}/{{places.id}}">{{places.name}}</a>
