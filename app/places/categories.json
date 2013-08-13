@@ -1,0 +1,422 @@
+[
+  {
+    "category":"accomodation",
+    "places":
+      [
+        {
+          "name": "Merdeka Palace Hotel",
+          "id": "merdeka"
+        },
+        {
+          "name": "Kuching Waterfront Lodge",
+          "id": "abc"
+        },
+        {
+          "name": "Mr.D's Bed and Breakfast",
+          "id": "abc"
+        },
+        {
+          "name": " Backpacker's Stay",
+          "id": "abc"
+        },
+        {
+          "name": " Rafflesia Lodge",
+          "id": "abc"
+        },
+        {
+          "name": " Batu Bata Guesthouse",
+          "id": "abc"
+        },
+        {
+          "name": " Berambih Lodge",
+          "id": "abc"
+        },
+        {
+          "name": " B and B Inn",
+          "id": "abc"
+        },
+        {
+          "name": " Hilton Kuching Hotel",
+          "id": "abc"
+        },
+        {
+          "name": " Grand Pinnacles Kuching Lodge",
+          "id": "abc"
+        },
+        {
+          "name": " Tune Hotel",
+          "id": "abc"
+        },
+        {
+          "name": " Pullman Kuching Hotel",
+          "id": "abc"
+        },
+        {
+          "name": " Grand Margherita Hotel",
+          "id": "abc"
+        },
+        {
+          "name": " Ariva Getaway Kuching",
+          "id": "abc"
+        },
+        {
+          "name": " Batik Boutique Hotel",
+          "id": "abc"
+        },
+        {
+          "name": " Abell Hotel",
+          "id": "abc"
+        },
+        {
+          "name": " The Room",
+          "id": "abc"
+        },
+        {
+          "name": " 360 Xpress City Centre",
+          "id": "abc"
+        },
+        {
+          "name": " De Palma Waterfront Kuching",
+          "id": "abc"
+        },
+        {
+          "name": " City Inn",
+          "id": "abc"
+        },
+        {
+          "name": " Kapit Hotel",
+          "id": "abc"
+        },
+        {
+          "name": " Hotel Grand Continental Kuching",
+          "id": "abc"
+        },
+        {
+          "name": " Tai Pan Hotel",
+          "id": "abc"
+        },
+        {
+          "name": " The LimeTree Hotel",
+          "id": "abc"
+        }
+      ]
+  },
+  {
+    "category":"conveniencestore",
+    "places":
+      [
+        {
+          "name": " HIANG THIAN SIANG TI TEMPLE",
+          "id": "abc"
+        },
+        {
+          "name": " Muzium Tekstil",
+          "id": "abc"
+        },
+        {
+          "name": " Sarawak Tourism Complex",
+          "id": "abc"
+        },
+        {
+          "name": " Sarawak Museum",
+          "id": "abc"
+        },
+        {
+          "name": " Main Bazaar",
+          "id": "abc"
+        },
+        {
+          "name": " Carpenter Street",
+          "id": "abc"
+        },
+        {
+          "name": " Chinese History Museum",
+          "id": "abc"
+        },
+        {
+          "name": " Waterfront",
+          "id": "abc"
+        },
+        {
+          "name": " Square Tower",
+          "id": "abc"
+        },
+        {
+          "name": " Kuching Cat Statue ",
+          "id": "abc"
+        },
+        {
+          "name": " Borneo Magic ",
+          "id": "abc"
+        },
+        {
+          "name": " Jing Lee Souvenir ",
+          "id": "abc"
+        },
+        {
+          "name": " BanLee Hog ",
+          "id": "abc"
+        },
+        {
+          "name": " Seven Trading",
+          "id": "abc"
+        },
+        {
+          "name": " Arts Of Asia",
+          "id": "abc"
+        },
+        {
+          "name": " Borneo Antique Gallery",
+          "id": "abc"
+        },
+        {
+          "name": " Fabriko ",
+          "id": "abc"
+        },
+        {
+          "name": " Thian Seng Gold Smith",
+          "id": "abc"
+        },
+        {
+          "name": " King Guan Seefood",
+          "id": "abc"
+        },
+        {
+          "name": " UNIKA Borneo ",
+          "id": "abc"
+        },
+        {
+          "name": " kelvin gallery ",
+          "id": "abc"
+        },
+        {
+          "name": " 99 Elegance ",
+          "id": "abc"
+        },
+        {
+          "name": " Livan Handicrafts",
+          "id": "abc"
+        }
+      ]
+  },
+  {
+    "category":"financialinstitution",
+    "places":
+      [
+        {
+          "name": " Hong Leong Bank",
+          "id": "abc"
+        },
+        {
+          "name": " Hong Leong Bank",
+          "id": "abc"
+        },
+        {
+          "name": " CIMB Bank",
+          "id": "abc"
+        },
+        {
+          "name": " United Overseas Bank",
+          "id": "abc"
+        },
+        {
+          "name": " Maybank",
+          "id": "abc"
+        },
+        {
+          "name": " CIMB Bank",
+          "id": "abc"
+        },
+        {
+          "name": " OCBC Bank",
+          "id": "abc"
+        },
+        {
+          "name": " Hong Leong Bank",
+          "id": "abc"
+        },
+        {
+          "name": " Eon Bank",
+          "id": "abc"
+        },
+        {
+          "name": " Public Bank",
+          "id": "abc"
+        },
+        {
+          "name": " Public Mutual Fund",
+          "id": "abc"
+        },
+        {
+          "name": " Alliance Bank",
+          "id": "abc"
+        },
+        {
+          "name": " OSK Investment bank",
+          "id": "abc"
+        }
+      ]
+  },
+  {
+    "category":"laundry",
+    "places":
+      [
+        {
+          "name": " Two Plus One",
+          "id": "abc"
+        },
+        {
+          "name": " Apple Laundry",
+          "id": "abc"
+        },
+        {
+          "name": " Spot Free Laundry",
+          "id": "abc"
+        },
+        {
+          "name": " My Express Laundry Services",
+          "id": "abc"
+        }
+      ]
+  },
+  {
+    "category":"nightspots",
+    "places":
+      [
+        {
+          "name": " The Knights",
+          "id": "abc"
+        },
+        {
+          "name": " Havana",
+          "id": "abc"
+        },
+        {
+          "name": " The Shore bistro",
+          "id": "abc"
+        },
+        {
+          "name": " Grappa",
+          "id": "abc"
+        },
+        {
+          "name": " Cock And Bull",
+          "id": "abc"
+        },
+        {
+          "name": " Trance Lounge",
+          "id": "abc"
+        },
+        {
+          "name": " Backstage",
+          "id": "abc"
+        }
+      ]
+  },
+  {
+    "category":"restaurants",
+    "places":
+    [
+        {
+          "name": " Little Lebanon",
+          "id": "abc"
+        },
+        {
+          "name": " James Brooks",
+          "id": "abc"
+        },
+        {
+          "name": " Lau Ya Keng",
+          "id": "abc"
+        },
+        {
+          "name": " Life Cafe",
+          "id": "abc"
+        },
+        {
+          "name": " On Top Lounge",
+          "id": "abc"
+        },
+        {
+          "name": " Kuching Station",
+          "id": "abc"
+        },
+        {
+          "name": " Station One Leisure Cafe",
+          "id": "abc"
+        },
+        {
+          "name": " The Junk Restaurant",
+          "id": "abc"
+        },
+        {
+          "name": " Green Hill Cornor",
+          "id": "abc"
+        },
+        {
+          "name": " John s place",
+          "id": "abc"
+        },
+        {
+          "name": " Tumis",
+          "id": "abc"
+        },
+        {
+          "name": " Tribal Stove",
+          "id": "abc"
+        },
+        {
+          "name": " Carvery",
+          "id": "abc"
+        },
+        {
+          "name": " Sanga",
+          "id": "abc"
+        },
+        {
+          "name": " RJ Ayam Bakar",
+          "id": "abc"
+        },
+        {
+          "name": " The Den Restaurant",
+          "id": "abc"
+        },
+        {
+          "name": " John s Pie",
+          "id": "abc"
+        },
+        {
+          "name": " Middle East Restaurant",
+          "id": "abc"
+        },
+        {
+          "name": " SCR-Singapore Chicken Rice",
+          "id": "abc"
+        },
+        {
+          "name": " Chinese Barbecue Specialist",
+          "id": "abc"
+        },
+        {
+          "name": " MAHARAJAH Cuisine",
+          "id": "abc"
+        },
+        {
+          "name": " Popular Vegetarian Restaurant",
+          "id": "abc"
+        },
+        {
+          "name": " Khatulistiwa Cafe Restaurant",
+          "id": "abc"
+        },
+        {
+          "name": " Top Spot Food court",
+          "id": "abc"
+        },
+        {
+          "name": " McDonald's Kuching",
+          "id": "abc"
+        }
+      ]
+  }
+]
