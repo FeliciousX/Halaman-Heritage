@@ -1,10 +1,8 @@
 'use strict';
 
 angular.module('halamanHeritageApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, categoryList) {
+    $scope.category = categoryList.query();
+    
+    $scope.oneAtATime = true;
   });
