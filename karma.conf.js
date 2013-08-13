@@ -11,6 +11,7 @@ files = [
   'app/bower_components/angular-ui/build/angular-ui.js',
   'app/bower_components/angular-bootstrap/ui-bootstrap.js',
   'app/bower_components/angular-mocks/angular-mocks.js',
+  'app/bower_components/angular-resource/angular-resource.js',
   'http://maps.googleapis.com/maps/api/js?sensor=false',
   'app/scripts/*.js',
   'app/scripts/**/*.js',
@@ -39,7 +40,7 @@ colors = true;
 logLevel = LOG_INFO;
 
 // enable / disable watching file and executing tests whenever any file changes
-autoWatch = false;
+autoWatch = true;
 
 // Start these browsers, currently available:
 // - Chrome

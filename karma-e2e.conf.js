@@ -18,7 +18,7 @@ exclude = [];
 reporters = ['progress'];
 
 // web server port
-port = 8080;
+port = 9876;
 
 // cli runner port
 runnerPort = 9100;
@@ -51,8 +51,8 @@ captureTimeout = 50000;
 singleRun = false;
 
 // Uncomment the following lines if you are using grunt's server to run the tests
-// proxies = {
-//   '/': 'http://localhost:9000/'
-// };
+proxies = {
+  '/': 'http://localhost:9000/'
+};
 // URL root prevent conflicts with the site root
-// urlRoot = '_karma_';
+urlRoot = '_karma_';

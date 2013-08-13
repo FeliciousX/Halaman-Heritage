@@ -8,39 +8,38 @@ angular.module('halamanHeritageApp')
       center: ll,
       zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP
-    }; 
+    };
 
     $scope.addMarker = function($event) {
       $scope.myMarkers.push(new google.maps.Marker({
         map: $scope.myMap,
         position: $event.latLng
-        }));
-      };
+      }));
+    };
 
-      $scope.setZoomMessage = function(zoom) {
-        $scope.zoomMessage = 'You just zoomed to '+zoom+'!';
-        console.log(zoom,'zoomed')
-      };
+    $scope.setZoomMessage = function(zoom) {
+      $scope.zoomMessage = 'You just zoomed to '+zoom+'!';
+    };
 
-      $scope.openMarkerInfo = function(marker) {
-        $scope.currentMarker = marker;
-        $scope.currentMarkerLat = marker.getPosition().lat();
-        $scope.currentMarkerLng = marker.getPosition().lng();
-        $scope.myInfoWindow.open($scope.myMap, marker);
-      };
+    $scope.openMarkerInfo = function(marker) {
+      $scope.currentMarker = marker;
+      $scope.currentMarkerLat = marker.getPosition().lat();
+      $scope.currentMarkerLng = marker.getPosition().lng();
+      $scope.myInfoWindow.open($scope.myMap, marker);
+    };
 
-      $scope.setMarkerPosition = function(marker, lat, lng) {
-        marker.setPosition(new google.maps.LatLng(lat, lng));
-      };
+    $scope.setMarkerPosition = function(marker, lat, lng) {
+      marker.setPosition(new google.maps.LatLng(lat, lng));
+    };
 
-      //Markers should be added after map is loaded
-      $scope.onMapIdle = function() {
-          if ($scope.myMarkers === undefined){    
-              var marker = new google.maps.Marker({
-                  map: $scope.myMap,
-                  position: ll
-              });
-              $scope.myMarkers = [marker, ];
-          }
-      };
+    //Markers should be added after map is loaded
+    $scope.onMapIdle = function() {
+      if ($scope.myMarkers === undefined){
+        var marker = new google.maps.Marker({
+          map: $scope.myMap,
+          position: ll
+        });
+        $scope.myMarkers = [marker, ];
+      }
+    };
   });
