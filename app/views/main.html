@@ -3,10 +3,19 @@
     <span class="add-on"><i class="icon-search"></i></span>
     <input type="text" ng-model="search.$">
   </div>
+  <div class="bubblingG" id="loader">
+    <span id="bubblingG_1">
+    </span>
+    <span id="bubblingG_2">
+    </span>
+    <span id="bubblingG_3">
+    </span>
+  </div>
   <accordion close-others="{{oneAtATime}}">
-    <accordion-group ng-repeat="list in category | filter:search" heading="{{list.category}}" id="clas">
+    <accordion-group ng-repeat="list in category | filter:search" heading="{{list.category}}" class="category-list hero-unit" img="img/{{places.name}}.png">
       <ul>
         <li ng-repeat="places in list.places | filter:search">
+          <!-- TODO: Include image name for each category in DB -->
           <a href="#/category/{{list.category}}/{{places.id}}">{{places.name}}</a>
         </li>
       </ul>
