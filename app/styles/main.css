@@ -34,13 +34,25 @@ div.container, div.ng-scope {
     margin:3px;
 }
 
+.accordion-image {
+    max-width: 60px;
+    max-height: 60px;
+}
+
 .category-list {
     opacity: 0;
+    width: 97% !important;
+    padding: 10px 10px 10px 10px !important;
+    margin: 0px 0px 0px 0px;
     animation: category-list 2s;
     animation-fill-mode: forwards;
     -webkit-animation: category-list 2s;
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-delay: 0.5s;
+}
+
+.category-list > .accordion-heading > a {
+    text-decoration: none;
 }
 
 /* Loading CSS */

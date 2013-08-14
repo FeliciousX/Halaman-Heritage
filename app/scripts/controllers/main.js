@@ -5,4 +5,6 @@ angular.module('halamanHeritageApp')
     $scope.category = categoryList.query();
     
     $scope.oneAtATime = true;
+
+    $scope.linkClass = 'btn btn-large';
   });
