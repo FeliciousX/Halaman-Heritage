@@ -2,4 +2,13 @@ node_modules
 dist
 .tmp
 .sass-cache
-app/bower_components
+app/bower_components/angular
+app/bower_components/angular-cookies
+app/bower_components/angular-mocks
+app/bower_components/angular-resource
+app/bower_components/angular-sanitize
+app/bower_components/angular-scenario
+app/bower_components/angular-ui
+app/bower_components/es5-shim
+app/bower_components/jquery
+app/bower_components/json3
