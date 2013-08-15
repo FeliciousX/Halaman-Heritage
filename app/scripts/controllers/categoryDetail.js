@@ -1,11 +1,9 @@
 'use strict';
-
+// TODO: beautify page and write tests
 angular.module('halamanHeritageApp')
-  .controller('CategorydetailCtrl', function ($scope, $routeParams, categoryList) {
+  .controller('CategorydetailCtrl', function ($scope, $routeParams, services) {
     $scope.placeId = $routeParams.placeId;
     $scope.categoryId = $routeParams.categoryId;
-    $scope.placeList = categoryList.query({categoryId: $scope.categoryId});
-
-    $scope.placeList = categoryList.query({categoryId: $routeParams.categoryId});
+    $scope.placeList = services.query({categoryId: $scope.categoryId});
 
   });

@@ -42,7 +42,7 @@ describe('Controller: CategorydetailCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
+  it('should get the right data from accomodation.json file', function () {
     expect(scope.placeList).toEqualData([]);
     $httpBackend.flush();
 

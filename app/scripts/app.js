@@ -15,7 +15,7 @@ angular.module('halamanHeritageApp', ['ui.bootstrap', 'ui', 'ngResource'])
         templateUrl: 'views/maps.html',
         controller: 'MapsCtrl'
       })
-      .when('/category/:categoryId/:placeId', {
+      .when('/category/:categoryId/:placeId', { // TODO: fix category details page
         templateUrl: 'views/categoryDetail.html',
         controller: 'CategorydetailCtrl'
       })

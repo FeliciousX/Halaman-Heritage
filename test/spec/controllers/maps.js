@@ -16,7 +16,7 @@ describe('Controller: MapsCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    
+  it('shouldn\'t do anything for now', function () {
+    // finish tests
   });
 });

@@ -2,7 +2,16 @@
   "name": "halaman-heritage",
   "version": "0.0.0",
   "dependencies": {
-    "grunt-karma": "~0.4.5"
+    "karma-script-launcher": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-requirejs": "~0.1.0",
+    "karma-jasmine": "~0.1.0",
+    "karma-coffee-preprocessor": "~0.1.0",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma": "~0.10.1",
+    "grunt-karma": "~0.6.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
