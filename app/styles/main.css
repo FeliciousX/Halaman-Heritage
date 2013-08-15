@@ -34,6 +34,32 @@ div.container, div.ng-scope {
     margin:3px;
 }
 
+.btn-splash {
+    width: 200px;
+    height: 215px;
+}
+
+@media only screen and (max-width: 600px)
+{
+    .btn-splash {
+        width: 90%;
+        height: 215px;
+    }
+}
+
+.btn-splash-img {
+    max-width: 140px;
+    max-height: 140px;
+}
+
+.span-cat {
+    text-align: center;
+}
+
+.span-maps {
+    text-align: center;
+}
+
 .accordion-image {
     max-width: 60px;
     max-height: 60px;
