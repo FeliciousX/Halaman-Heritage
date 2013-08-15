@@ -19,6 +19,10 @@ angular.module('halamanHeritageApp', ['ui.bootstrap', 'ui', 'ngResource'])
         templateUrl: 'views/categoryDetail.html',
         controller: 'CategorydetailCtrl'
       })
+      .when('/splash', {
+        templateUrl: 'views/splash.html',
+        controller: 'SplashCtrl'
+      })
       .otherwise({
         redirectTo: '/404'
       });
