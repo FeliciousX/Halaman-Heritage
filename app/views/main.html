@@ -12,7 +12,7 @@
     </span>
   </div>
   <accordion close-others="{{oneAtATime}}">
-    <accordion-group ng-repeat="list in category | filter:search" heading="{{list.category}}" class="category-list hero-unit" img="img/{{places.name}}.png">
+    <accordion-group ng-repeat="list in category | filter:search" heading="{{list.category}}" class="category-list hero-unit">
       <ul>
         <li ng-repeat="places in list.places | filter:search">
           <!-- TODO: Include image name for each category in DB -->
