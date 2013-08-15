@@ -1,60 +1,69 @@
-// Karma configuration
+module.exports = function(config) {
+  'use strict';
 
-// base path, that will be used to resolve files and exclude
-basePath = '';
+  config.set({
 
-// list of files / patterns to load in the browser
-files = [
-  JASMINE,
-  JASMINE_ADAPTER,
-  'app/bower_components/angular/angular.js',
-  'app/bower_components/angular-ui/build/angular-ui.js',
-  'app/bower_components/angular-bootstrap/ui-bootstrap.js',
-  'app/bower_components/angular-mocks/angular-mocks.js',
-  'app/bower_components/angular-resource/angular-resource.js',
-  'http://maps.googleapis.com/maps/api/js?sensor=false',
-  'app/scripts/*.js',
-  'app/scripts/**/*.js',
-  'test/mock/**/*.js',
-  'test/spec/**/*.js'
-];
+    // Karma configuration
 
-// list of files to exclude
-exclude = [];
+    // base path, that will be used to resolve files and exclude
+    basePath: '',
 
-// test results reporter to use
-// possible values: dots || progress || growl
-reporters = ['progress'];
+    // Frameworks to load
+    frameworks: ['jasmine'],
 
-// web server port
-port = 8080;
+    // list of files / patterns to load in the browser
+    files: [
+      'app/bower_components/angular/angular.js',
+      'app/bower_components/angular-ui/build/angular-ui.js',
+      'app/bower_components/angular-bootstrap/ui-bootstrap.js',
+      'app/bower_components/angular-mocks/angular-mocks.js',
+      'app/bower_components/angular-resource/angular-resource.js',
+      'app/scripts/google/*.js',
+      'app/scripts/*.js',
+      'app/scripts/**/*.js',
+      'test/mock/**/*.js',
+      'test/spec/**/*.js'
+    ],
 
-// cli runner port
-runnerPort = 9100;
+    // list of files to exclude
+    exclude: [],
 
-// enable / disable colors in the output (reporters and logs)
-colors = true;
+    // test results reporter to use
+    // possible values: dots || progress || growl
+    reporters: ['progress'],
 
-// level of logging
-// possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-logLevel = LOG_INFO;
+    // web server port
+    port: 8080,
 
-// enable / disable watching file and executing tests whenever any file changes
-autoWatch = true;
+    // cli runner port
+    runnerPort: 9100,
 
-// Start these browsers, currently available:
-// - Chrome
-// - ChromeCanary
-// - Firefox
-// - Opera
-// - Safari (only Mac)
-// - PhantomJS
-// - IE (only Windows)
-browsers = ['PhantomJS'];
+    // enable / disable colors in the output (reporters and logs)
+    colors: true,
 
-// If browser does not capture in given timeout [ms], kill it
-captureTimeout = 50000;
+    // level of logging
+    // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
+    logLevel: config.LOG_INFO,
 
-// Continuous Integration mode
-// if true, it capture browsers, run tests and exit
-singleRun = false;
+    // enable / disable watching file and executing tests whenever any file changes
+    autoWatch: true,
+
+    // Start these browsers, currently available:
+    // - Chrome
+    // - ChromeCanary
+    // - Firefox
+    // - Opera
+    // - Safari (only Mac)
+    // - PhantomJS
+    // - IE (only Windows)
+    browsers: ['PhantomJS'],
+
+    // If browser does not capture in given timeout [ms], kill it
+    captureTimeout: 50000,
+
+    // Continuous Integration mode
+    // if true, it capture browsers, run tests and exit
+    singleRun: false
+
+  });
+};
