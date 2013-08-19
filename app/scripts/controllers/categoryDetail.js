@@ -1,9 +1,10 @@
 'use strict';
 
 angular.module('halamanHeritageApp')
-  .controller('CategorydetailCtrl', function ($scope, $routeParams, categoryList) {
+  .controller('CategorydetailCtrl', function ($scope, $routeParams, services, meny) {
     $scope.placeId = $routeParams.placeId;
 
-    $scope.placeList = categoryList.query({categoryId: $routeParams.categoryId});
+    $scope.placeList = services.query({categoryId: $routeParams.categoryId});
 
+    var meny = Meny.create(meny.menyInit());
   });
