@@ -15,13 +15,12 @@ angular.module('halamanHeritageApp', ['ui.bootstrap', 'ui', 'ngResource'])
         templateUrl: 'views/maps.html',
         controller: 'MapsCtrl'
       })
-      .when('/category/:categoryId/:placeId/details', { // TODO: fix category details page
+      .when('/category/:categoryId/:placeId/details', {
         templateUrl: 'views/categoryDetail.html',
         controller: 'CategorydetailCtrl'
-      })
-      .when('/main', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+      }).when('/categories', { // CHANGED: from main to categories
+        templateUrl: 'views/Categories.html',
+        controller: 'CategoriesCtrl'
       })
       .otherwise({
         redirectTo: '/404'
