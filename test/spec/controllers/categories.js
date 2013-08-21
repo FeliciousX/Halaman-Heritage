@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: CategoriesCtrl', function () {
 
   beforeEach(function(){
     this.addMatchers({
@@ -13,7 +13,7 @@ describe('Controller: MainCtrl', function () {
   // load the controller's module
   beforeEach(module('halamanHeritageApp'));
 
-  var MainCtrl, $httpBackend, scope;
+  var CategoriesCtrl, $httpBackend, scope;
   
   // Initialize the controller and a mock scope
   beforeEach(inject(function (_$httpBackend_, $controller, $rootScope) {
@@ -25,7 +25,7 @@ describe('Controller: MainCtrl', function () {
         {'name':'Merdeka Palace Hotel', 'id': 'merdeka'}
       ]}]);
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
+    CategoriesCtrl = $controller('CategoriesCtrl', {
       $scope: scope
     });
   }));
