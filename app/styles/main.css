@@ -11,7 +11,7 @@ div.container, div.ng-scope {
     height: inherit;
 }
 
-.hero-unit {
+/*.hero-unit {
     margin: 50px auto 0 auto;
     width: 300px;
     font-size: 18px;
@@ -26,12 +26,38 @@ div.container, div.ng-scope {
     font-size: 60px;
     line-height: 1;
     letter-spacing: -1px;
-}
+}*/
 
 #map_canvas {
     height:100%;
     border:2px solid #777777;
     margin:3px;
+}
+
+.btn-splash {
+    width: 200px;
+    height: 215px;
+}
+
+@media only screen and (max-width: 600px)
+{
+    .btn-splash {
+        width: 90%;
+        height: 215px;
+    }
+}
+
+.btn-splash-img {
+    max-width: 140px;
+    max-height: 140px;
+}
+
+.span-cat {
+    text-align: center;
+}
+
+.span-maps {
+    text-align: center;
 }
 
 .accordion-image {
@@ -44,153 +70,34 @@ div.container, div.ng-scope {
     width: 97% !important;
     padding: 10px 10px 10px 10px !important;
     margin: 0px 0px 0px 0px;
-    animation: category-list 2s;
+    animation: category-list 1s;
     animation-fill-mode: forwards;
-    -webkit-animation: category-list 2s;
+    -webkit-animation: category-list 1s;
     -webkit-animation-fill-mode: forwards;
-    -webkit-animation-delay: 0.5s;
+    -webkit-animation-delay: 0.1s;
 }
 
 .category-list > .accordion-heading > a {
     text-decoration: none;
 }
 
-/* Loading CSS */
-
-.bubblingG {
-text-align: center;
-width:80px;
-height:50px;
+.cat-details {
+    padding-left: 4px;
 }
 
-.bubblingG span {
-display: inline-block;
-vertical-align: middle;
-width: 10px;
-height: 10px;
-margin: 25px auto;
-background: #6FB5F2;
--moz-border-radius: 50px;
--moz-animation: bubblingG 0.7s infinite alternate;
--webkit-border-radius: 50px;
--webkit-animation: bubblingG 0.7s infinite alternate;
--ms-border-radius: 50px;
--ms-animation: bubblingG 0.7s infinite alternate;
--o-border-radius: 50px;
--o-animation: bubblingG 0.7s infinite alternate;
-border-radius: 50px;
-animation: bubblingG 0.7s infinite alternate;
+.meny-left > .meny {
+    opacity: 0;
 }
 
-#bubblingG_1 {
--moz-animation-delay: 0s;
--webkit-animation-delay: 0s;
--ms-animation-delay: 0s;
--o-animation-delay: 0s;
-animation-delay: 0s;
+.meny-active > .meny {
+    opacity: 1;
 }
 
-#bubblingG_2 {
--moz-animation-delay: 0.21s;
--webkit-animation-delay: 0.21s;
--ms-animation-delay: 0.21s;
--o-animation-delay: 0.21s;
-animation-delay: 0.21s;
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
-
-#bubblingG_3 {
--moz-animation-delay: 0.42s;
--webkit-animation-delay: 0.42s;
--ms-animation-delay: 0.42s;
--o-animation-delay: 0.42s;
-animation-delay: 0.42s;
-}
-
-@-moz-keyframes bubblingG {
-0% {
-width: 10px;
-height: 10px;
-background-color:#6FB5F2;
--moz-transform: translateY(0);
-}
-
-100% {
-width: 24px;
-height: 24px;
-background-color:#FFFFFF;
--moz-transform: translateY(-21px);
-}
-
-}
-
-@-webkit-keyframes bubblingG {
-0% {
-width: 10px;
-height: 10px;
-background-color:#6FB5F2;
--webkit-transform: translateY(0);
-}
-
-100% {
-width: 24px;
-height: 24px;
-background-color:#FFFFFF;
--webkit-transform: translateY(-21px);
-}
-
-}
-
-@-ms-keyframes bubblingG {
-0% {
-width: 10px;
-height: 10px;
-background-color:#6FB5F2;
--ms-transform: translateY(0);
-}
-
-100% {
-width: 24px;
-height: 24px;
-background-color:#FFFFFF;
--ms-transform: translateY(-21px);
-}
-
-}
-
-@-o-keyframes bubblingG {
-0% {
-width: 10px;
-height: 10px;
-background-color:#6FB5F2;
--o-transform: translateY(0);
-}
-
-100% {
-width: 24px;
-height: 24px;
-background-color:#FFFFFF;
--o-transform: translateY(-21px);
-}
-
-}
-
-@keyframes bubblingG {
-0% {
-width: 10px;
-height: 10px;
-background-color:#6FB5F2;
-transform: translateY(0);
-}
-
-100% {
-width: 24px;
-height: 24px;
-background-color:#FFFFFF;
-transform: translateY(-21px);
-}
-
-}
-/** End */
 
 @keyframes category-list {
     from        { opacity: 0; top: 0%; }

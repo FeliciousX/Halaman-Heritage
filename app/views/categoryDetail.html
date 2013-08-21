@@ -1,7 +1,28 @@
+<div class='meny'>
+	<h2>Navigation</h2>
+	<ul>
+		<li><a href='#/splash'>Main</a></li>
+		<li><a href='#/'>Categories</a></li>
+		<li><a href='#/maps'>Maps</a></li>
+	</ul>
+</div>
 <div class='container-fluid'>
-	<p>Name: {{placeList[0].name}}</p>
-	<p>Opening Hours: {{placeList[0].opening_hours}}</p>
-	<p>Address: {{placeList[0].location}}</p>
-	<p>Price Range: {{placeList[0].price_range}}</p>
-	<p>Description: {{placeList[0].description}}</p>
+	<div class='center'><i class='icon-chevron-up'></i></div>
+	<div class='hero-unit'>
+		<div class='row'><h3>Name</h3></div>
+			<div class='row cat-details'>{{placeList[placeId - 1].name}}</div> 
+			<hr />
+		<div class='row'><h3>Opening Hours</h3></div>
+			<div class='row cat-details'>{{placeList[placeId - 1].opening_hours}}</div>
+			<hr />
+		<div class='row'><h3>Address</h3></div>
+			<div class='row cat-details'>{{placeList[placeId - 1].location}}</div> 
+			<hr />
+		<div class='row'><h3>Price Range</h3></div>
+			<div class='row cat-details'>{{placeList[placeId - 1].price_range}}</div> 
+			<hr />
+		<div class='row'><h3>Description</h3></div>
+			<div class='row cat-details'>{{placeList[placeId - 1].description}}</div> 
+			<hr />
+	</div>
 </div>
