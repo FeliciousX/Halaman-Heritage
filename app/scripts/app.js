@@ -19,7 +19,7 @@ angular.module('halamanHeritageApp', ['ui.bootstrap', 'ui', 'ngResource'])
         templateUrl: 'views/categoryDetail.html',
         controller: 'CategorydetailCtrl'
       }).when('/categories', { // CHANGED: from main to categories
-        templateUrl: 'views/Categories.html',
+        templateUrl: 'views/categories.html',
         controller: 'CategoriesCtrl'
       })
       .otherwise({

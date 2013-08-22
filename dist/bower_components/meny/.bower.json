@@ -9,6 +9,5 @@
     "commit": "9f8354f76316ea4a4a5bf1c3c641922099ff3c2f"
   },
   "_source": "git://github.com/hakimel/Meny.git",
-  "_target": "~1.2.0",
-  "_direct": true
+  "_target": "~1.2.0"
 }
