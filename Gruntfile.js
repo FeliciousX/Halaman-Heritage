@@ -229,6 +229,9 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
           src: [
+            'admin/*', // TODO: include php files in build
+            'places/*', // TODO: include json files in build
+            'img/{,*/}*.{png, jpg}', // TODO: include img files in build
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/**/*',
