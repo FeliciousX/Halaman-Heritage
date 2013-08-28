@@ -2,6 +2,7 @@ html { height: 99% }
 
 body {
     background: #fafafa;
+    font-weight: 300;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
     height: 100%;
@@ -9,6 +10,10 @@ body {
 
 div.container, div.ng-scope {
     height: inherit;
+}
+
+.hero-unit{
+    padding-top: 0px !important;
 }
 
 /*.hero-unit {
@@ -33,7 +38,9 @@ div.container, div.ng-scope {
     border:2px solid #777777;
     margin:3px;
 }
-
+.btn{
+    background-image: none !important;
+}
 .btn-splash {
     width: 200px;
     height: 215px;
@@ -48,8 +55,8 @@ div.container, div.ng-scope {
 }
 
 .btn-splash-img {
-    max-width: 140px;
-    max-height: 140px;
+    max-width: 130px;
+    max-height: 130px;
 }
 
 .span-cat {
@@ -60,15 +67,17 @@ div.container, div.ng-scope {
     text-align: center;
 }
 
-.accordion-image {
-    max-width: 60px;
-    max-height: 60px;
+
+ul{
+    list-style-type: none;
 }
 
 .category-list {
+    font-family: 'Roboto';
+    font-size: 24px;
     opacity: 0;
     width: 97% !important;
-    padding: 10px 10px 10px 10px !important;
+    padding: 5px 10px 5px 0px !important;
     margin: 0px 0px 0px 0px;
     animation: category-list 1s;
     animation-fill-mode: forwards;
@@ -81,16 +90,36 @@ div.container, div.ng-scope {
     text-decoration: none;
 }
 
-.cat-details {
-    padding-left: 4px;
+.accordion-group{
+    padding: 0 !important;
+    border-color: #b4cfec !important;
+}
+.accordion-heading, .accordion-toggle{
+    background-color: #fefcff;
+    padding: 0 !important;
+}
+.accordion-image {
+    max-width: 100px;
+    max-height: 100px;
 }
 
+hr{
+    border-color: lightgray !important;
+}
+.row{
+    font-family: 'Roboto Light'
+}
+
+.cat-details {
+    padding-left: 40px !important;
+    font-family: 'Roboto';
+}
 .meny-left > .meny {
     opacity: 0;
 }
 
 .meny-active > .meny {
-    opacity: 1;
+    opacity: 1px;
 }
 
 .center {
