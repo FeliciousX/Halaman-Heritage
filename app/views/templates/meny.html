@@ -1,44 +1,57 @@
 <!-- TODO: add this style in CSS instead -->
-<!-- TODO: Navigation list (ul, li) need to make it same length -->
 
 <head>
 	<style type="text/css">
-		h2, .meny-list{
+		table{
 			font-family: "Roboto";
-			font-weight: 300px;
 		}
-		.meny-list{
-			margin-right: 1%;			
-			margin-top: -20px;
-		}
-		.meny-list li{	
+		.meny-list{	
+			margin-top: 2%;
 			font-size: 24px;
-			padding-top: 22px;
 		}
-		.meny-list a{
-			color:white;
-			text-decoration: none;
-
-			padding:4px;
-			padding-right:10%;
-			padding-left: 10%;
+		th{
+			font-weight: lighter;
+			text-align: left;
+			padding-bottom: 20px;
+		}		
+		tr{
+			border: solid white 2px;
+		}
+		td{
+			font-family: "Verdana";
+			font-size: 18px;
+			background-color: #82caff;
+			text-align: right;
+			text-indent: 100px;
+			padding: 10px;
 			
-			background-color: #5cb3ff;
-			border-top: white solid 1px;
 		}
-		.meny-list a:hover{
-			background-color: #56A5EC;
+		td a{
+			text-decoration: none;
+			color: white;
 		}
-		.meny-list a:active{
-			color:white;
-			background-color: #82CAFF;
+		td a:hover, td:hover{
+			text-decoration: none;
+			color: white;
+			background-color: lightcoral;
 		}
+		td a:active{
+			color:brown;
+			text-decoration: none;
+		}
+
 	</style>
 </head>
 
-<h2>Navigation</h2>
-<ul class="meny-list">
+<!-- <h2>Navigation</h2> -->
+<table class="meny-list">
+	<tr><th>Navigation</th></tr>
+	<tr><td><a href='#'>Main</a></td></tr>
+	<tr><td><a href='#/categories'>Categories</a></td></tr>
+	<tr><td><a href='#/maps'>Maps</a></td></tr>
+</table>
+<!-- <ul class="meny-list">
 	<li><a href='#/'>Main</a></li>
 	<li><a href='#/categories'>Categories</a></li>
 	<li><a href='#/maps'>Maps</a></li>
-</ul>
+</ul> -->

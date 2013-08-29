@@ -107,12 +107,14 @@ hr{
     border-color: lightgray !important;
 }
 .row{
-    font-family: 'Roboto Light'
+    font-family: 'Roboto Light';
+    font-family: 'Georgia';
+    font-weight: bold !important;
 }
 
 .cat-details {
     padding-left: 40px !important;
-    font-family: 'Roboto';
+
 }
 .meny-left > .meny {
     opacity: 0;
