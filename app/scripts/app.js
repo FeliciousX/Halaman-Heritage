@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('halamanHeritageApp', ['ui.bootstrap', 'ui', 'ngResource'])
+angular.module('halamanHeritageApp', ['ui.bootstrap', 'ui', 'ngResource', 'google-maps'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
