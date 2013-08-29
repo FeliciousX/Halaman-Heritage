@@ -1,8 +1,4 @@
-<div>
-    <div class="map_canvas" id="map_canvas" ui-map="myMap" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}">
-    </div>
-    
-    <!--In addition to creating the markers on the map, div elements with existing google.maps.Marker object should be created to hook up with events -->
-    <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}">
-    </div>
+<navigation class='meny'></navigation>
+<div class="container-fluid">
+	<google-map center="center" draggable="true" zoom="zoom" markers="markers" mark-click="false"></google-map>
 </div>
