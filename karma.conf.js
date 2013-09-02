@@ -19,12 +19,17 @@ module.exports = function(config) {
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/bower_components/angular-resource/angular-resource.js',
       'app/bower_components/meny/js/meny.min.js',
-      'app/scripts/google/*.js',
+      'app/bower_components/angular-google-maps/src/angular-google-maps.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      'test/spec/**/*.js',
+      'app/views/**/*.html'
     ],
+
+    preprocessors: {
+      'app/views/**/*.html': 'html2js'
+    },
 
     // list of files to exclude
     exclude: [],
