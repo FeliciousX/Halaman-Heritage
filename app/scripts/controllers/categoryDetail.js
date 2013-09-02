@@ -5,4 +5,5 @@ angular.module('halamanHeritageApp')
     $scope.placeId = $routeParams.placeId;
 
     $scope.placeList = services.query({categoryId: $routeParams.categoryId});
+
   });

@@ -1,7 +1,13 @@
 'use strict';
 
 angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, services) {
-  var category = services.query({categoryId: 'accomodation'});
+  $scope.category = services.query({categoryId: 'accomodation'});
+
+  for (var prop in $scope.category) {
+    if (result.hasOwnProperty(prop)) {
+      console.log($scope.category[prop]);
+    };
+  };
 
   $scope.markers = [];
   $scope.center = {
