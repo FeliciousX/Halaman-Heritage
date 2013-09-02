@@ -281,7 +281,7 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, se
     $scope.markers.push({
       latitude: $scope.category[prop].lng,
       longitude: $scope.category[prop].lat,
-      infoWindow: $scope.category[prop].name
+      infoWindow: '<h3>' + $scope.category[prop].name + '</h3><p><a href="#/category/accomodation/' + $scope.category[prop].id + '/details">More details..</a></p>'
     });
   };
 
