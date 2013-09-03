@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, services) {
+angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, services, toMaps) {
 
   $scope.category = [
   {
@@ -287,11 +287,22 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, se
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
-
-      $scope.center = {
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude
-      };
+      if(toMaps.coords != "0,0") {
+        var coords = toMaps.coords.split(',');
+        console.log(parseFloat(coords[0]));
+        console.log(parseFloat(coords[1]));
+        $scope.zoom = 17;
+        $scope.center = {
+          latitude: parseFloat(coords[0]),
+          longitude: parseFloat(coords[1])
+        };
+      }
+      else {
+        $scope.center = {
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude
+        };
+      }
 
       $scope.markers.push({ // adding marker on ur current location for fun
         latitude: position.coords.latitude,
