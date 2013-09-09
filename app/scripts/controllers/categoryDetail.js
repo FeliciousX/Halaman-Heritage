@@ -268,6 +268,10 @@ angular.module('halamanHeritageApp')
 		}
 	];
      
-     //TODO: Change lng to lat and vice versea
-    toMaps.coords = $scope.category[$routeParams.placeId - 1].lng + ',' + $scope.category[$routeParams.placeId - 1].lat;
+     //TODO: Change lng to lat and vice versa
+    toMaps.set = true;
+    toMaps.latitude = $scope.category[$routeParams.placeId - 1].lng;
+    toMaps.longitude = $scope.category[$routeParams.placeId - 1].lat;
+    toMaps.infoWindow = '<h3>' + $scope.category[$routeParams.placeId - 1].name + '</h3><p><a href="#/category/accomodation/' + $scope.category[$routeParams.placeId - 1].id + '/details">More details..</a></p>'
+    toMaps.id = $scope.category[$routeParams.placeId -1 ].id;
   });
