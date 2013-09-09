@@ -268,33 +268,28 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, se
 
 
   $scope.markers = [];
-  $scope.center = {
+  $scope.center = { // by default, centers to Swinburne.
+    // TODO: Centers to Plaza Merdeka by default
     latitude: 1.532528,
     longitude: 110.358052,
   };
+
+  $scope.windows = [];
 
   $scope.markClick = true;
   $scope.zoom = 15;
   $scope.fit = true;
 
-  for (var prop in $scope.category) {
-    $scope.markers.push({
-      latitude: $scope.category[prop].lng,
-      longitude: $scope.category[prop].lat,
-      infoWindow: '<h3>' + $scope.category[prop].name + '</h3><p><a href="#/category/accomodation/' + $scope.category[prop].id + '/details">More details..</a></p>'
-    });
-  };
-
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
-      if(toMaps.coords != "0,0") {
-        var coords = toMaps.coords.split(',');
-        console.log(parseFloat(coords[0]));
-        console.log(parseFloat(coords[1]));
+      if(toMaps.set) {
+        toMaps.set = false;
+        console.log(toMaps.latitude);
+        console.log(toMaps.longitude);
         $scope.zoom = 17;
         $scope.center = {
-          latitude: parseFloat(coords[0]),
-          longitude: parseFloat(coords[1])
+          latitude: toMaps.latitude,
+          longitude: toMaps.longitude
         };
       }
       else {
@@ -304,9 +299,10 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, se
         };
       }
 
-      $scope.markers.push({ // adding marker on ur current location for fun
+      $scope.markers.push({ // adding marker on ur current location
         latitude: position.coords.latitude,
-        longitude: position.coords.longitude
+        longitude: position.coords.longitude,
+        infoWindow: 'You are here!'
       });
 
       $scope.$apply();
@@ -314,5 +310,15 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, se
 
     });
   };
+
+  for (var prop in $scope.category) {
+    $scope.markers.push({
+      latitude: $scope.category[prop].lng,
+      longitude: $scope.category[prop].lat,
+      infoWindow: '<h3>' + $scope.category[prop].name + '</h3><p><a href="#/category/accomodation/' + $scope.category[prop].id + '/details">More details..</a></p>'
+    });
+  };
+
+
 
 });
