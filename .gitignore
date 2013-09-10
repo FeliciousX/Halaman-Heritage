@@ -3,6 +3,7 @@ node_modules
 .sass-cache
 app/bower_components/angular
 app/bower_components/angular-cookies
+app/bower_components/angular-google-maps
 app/bower_components/angular-mocks
 app/bower_components/angular-resource
 app/bower_components/angular-sanitize
