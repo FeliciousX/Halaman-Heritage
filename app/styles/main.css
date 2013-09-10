@@ -160,3 +160,8 @@ hr{
     to          { opacity: 1; top: 45%; }
 }
 
+/* Map section */
+div .angular-google-map {
+    display: block;
+    height: 100%;
+}
