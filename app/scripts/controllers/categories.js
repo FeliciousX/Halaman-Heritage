@@ -3,6 +3,6 @@
 angular.module('halamanHeritageApp')
   .controller('CategoriesCtrl', function ($scope, services) {
     $scope.category = services.query();
-    
+
     $scope.oneAtATime = true;
   });
