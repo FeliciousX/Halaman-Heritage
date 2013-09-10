@@ -11,7 +11,8 @@
     "angular-ui": "~0.4.0",
     "angular-bootstrap": "~0.4.0",
     "jquery": "~2.0.3",
-    "meny": "~1.2.0"
+    "meny": "~1.2.0",
+    "angular-google-maps": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",
