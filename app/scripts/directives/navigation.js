@@ -3,7 +3,7 @@
 angular.module('halamanHeritageApp')
   .directive('navigation', function () {
     return {
-    	/*template: '<h2>Navigation</h2>' + 
+    	/*template: '<h2>Navigation</h2>' +
 									'<ul>' +
 										'<li><a href=\'#/\'>Main</a></li>' +
 										'<li><a href=\'#/categories\'>Categories</a></li>' +
