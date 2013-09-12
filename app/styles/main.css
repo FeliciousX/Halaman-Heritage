@@ -1,7 +1,7 @@
 html { height: 100% }
 
 body {
-    height: 100%;
+    height: 90% !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #505;
     background-image: url(../img/back_g.png);
@@ -71,7 +71,7 @@ div.container, div.ng-scope {
 }
 
 ul{
-    list-style-type: none;
+    list-style-image: url(../img/bullet.png);
 }
 
 .category-list {
@@ -88,9 +88,25 @@ ul{
     -webkit-animation-delay: 0.1s;
 }
 
+.main-content{
+   background-image: url(../img/back_g.png) ;
+   /*margin-top: -13px;*/
+   padding-left: 3px;
+   padding-top: 15px;
+}
+
+.nav-button{
+    border: silver solid 1px;
+    border-radius: 5px;
+    height: 35px;
+    width: 70px;
+    margin: 3px;
+    margin-top: -7px;
+    margin-right: 5px;
+}
 .category-list > .accordion-heading > a {
-    text-decoration: none ;
-    font-size: 90%;
+    text-decoration: none;
+    font-size: 100%;
     color: #505050;
 }
 .accordion-heading, .accordion-toggle{
@@ -164,25 +180,67 @@ div .angular-google-map {
     padding: 0px 0px 0px 0px !important;
 }
 
-.header, .footer{
+/*HEADER & FOOTER*/
+#header, #footer{
+    font-family: "Segoe UI";
     color: white;
     background-color: orange;
-    height: 40px;
+    height: 30px;
     text-align: center;
 }
 
-.header{
+#header{
     padding-top: 10px;
     margin-left: -20px;
     margin-right: -20px;
     margin-bottom: 1%;
 }
 
-.footer{
+#footer{
+    position: fixed;
     bottom: 0px;
     width: 100%;
-    position: absolute;
     text-align: center;
     margin-left: -20px;
-    margin-right: -20px;
+    padding-right: 20px;
+}
+
+
+/*SIDE NAVIGATION BAR*/
+.side-nav{
+    font-family: "segoe UI";
+    color: #505050;
+    opacity: 0.9;
+    margin-top: 46px;
+    height: 100%;
+    background-image: url(../img/back_g.jpg);
+    font-size: 20px;
+    padding-left: 30px;
+}
+.side-nav h2{
+    margin-left: -10px;
+    font-weight: normal;
+}
+.side-nav a{
+    color: black; 
+}
+.side-list{
+    background-color: #fafafa;
+    opacity: 0.7;
+    width: 100%;
+}
+.side-list td{
+    padding: 5px;
+}
+.side-list a{
+    border-radius: 5px;
+    display: block;
+    text-decoration: none;
+    padding:10px;
+}
+.side-list a:hover, .side-list a:active{
+    color: #fafafa;
+    text-decoration: none;
+    background-color: black;
+    font-weight: bold;
 }
