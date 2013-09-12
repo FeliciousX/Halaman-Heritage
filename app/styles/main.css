@@ -1,7 +1,6 @@
 html { height: 100% }
 
 body {
-    height: 80% !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #505;
     background-image: url(../img/back_g.png);
@@ -15,24 +14,6 @@ div.container, div.ng-scope {
 .hero-unit{
     padding-top: 0px !important;
 }
-
-/*.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-}
-
-.hero-unit h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-}*/
-
 #map_canvas {
     height:100%;
     border:2px solid #777777;
@@ -41,7 +22,7 @@ div.container, div.ng-scope {
 .btn{
     margin-top: 20px;
     margin-left: auto;
-    border: orange solid 7px !important;
+    border: orange solid 3px !important;
     background-image: none !important;
 }
 .btn-splash {
@@ -53,18 +34,14 @@ div.container, div.ng-scope {
     font-size: 25px;
 }
 
-@media only screen and (max-width: 600px)
-{
-    .btn-splash {
-        width: 100%;
-        height: 205px;
-    }
-}
-
 .btn-splash-img {
     float:left;
     max-width: 50%;
     max-height: 80px;
+}
+.banner{
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .span-cat {
@@ -77,6 +54,9 @@ div.container, div.ng-scope {
 
 ul{
     list-style-image: url(../img/bullet.png);
+}
+ul li{
+    padding-bottom: 5px;
 }
 
 .category-list {
@@ -99,7 +79,9 @@ ul{
    padding-left: 3px;
    padding-top: 15px;
 }
-
+.map-back{
+    padding-top: 10px !important;
+}
 .nav-button{
     border: silver solid 1px;
     border-radius: 5px;
@@ -216,7 +198,7 @@ div .angular-google-map {
 .side-nav{
     font-family: "segoe UI";
     color: #505050;
-    opacity: 0.9;
+    opacity: 1;
     margin-top: 46px;
     height: 100%;
     background-image: url(../img/back_g.jpg);
@@ -253,4 +235,29 @@ div .angular-google-map {
 
 #sp-page{
     width: 95% !important;
+}
+
+
+/*When media less than size*/
+@media only screen and (max-width: 600px)
+{
+    .btn-splash {
+        width: 100%;
+        height: 110px;
+    }
+    .btn-splash h2{
+        font-size: 120%;
+    }
+    .category-list > .accordion-heading > a{
+        font-size: 80%;
+    }
+    .accordion-image {
+        padding-right: 10px;
+    }
+    #sp-page{
+        width: 90% !important;
+    }
+    .nav-button{
+        width: 30px;
+    }
 }
