@@ -57,9 +57,9 @@ div.container, div.ng-scope {
     }
 }
 
-.btn-splash-img {/*
+.btn-splash-img {
     max-width: 50%;
-    max-height: 70px;*/
+    max-height: 70px;
 }
 
 .span-cat {
@@ -164,12 +164,25 @@ div .angular-google-map {
     padding: 0px 0px 0px 0px !important;
 }
 
-.footer{
+.header, .footer{
     color: white;
     background-color: orange;
+    height: 40px;
+    text-align: center;
+}
+
+.header{
+    padding-top: 10px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 1%;
+}
+
+.footer{
     bottom: 0px;
     width: 100%;
-    height: 50px;
     position: absolute;
     text-align: center;
+    margin-left: -20px;
+    margin-right: -20px;
 }
