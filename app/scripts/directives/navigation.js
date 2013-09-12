@@ -9,7 +9,7 @@ angular.module('halamanHeritageApp')
 										'<li><a href=\'#/categories\'>Categories</a></li>' +
 										'<li><a href=\'#/maps\'>Maps</a></li>' +
 									'</ul>',*/ // CHANGED: Used templateUrl instead of template
-      templateUrl: 'views/templates/meny.html',
+      templateUrl: 'views/templates/menu.html',
       restrict: 'E',
       controller: function ($scope, meny) {
       	var meny = Meny.create(meny.menyInit());

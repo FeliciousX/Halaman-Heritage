@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('halamanHeritageApp', ['ui.bootstrap', 'ui', 'ngResource', 'google-maps'])
+angular.module('halamanHeritageApp', ['shoppinpal.mobile-menu', 'ui.bootstrap', 'ui', 'ngResource', 'google-maps'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
