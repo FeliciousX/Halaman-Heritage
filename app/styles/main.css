@@ -1,7 +1,7 @@
 html { height: 100% }
 
 body {
-    height: 90% !important;
+    height: 80% !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #505;
     background-image: url(../img/back_g.png);
@@ -45,8 +45,12 @@ div.container, div.ng-scope {
     background-image: none !important;
 }
 .btn-splash {
-    width: 400px;
-    height: 205px;
+    width: 450px;
+    height: 135px;
+}
+.btn-splash h2{
+    padding-top: 3%;
+    font-size: 25px;
 }
 
 @media only screen and (max-width: 600px)
@@ -58,8 +62,9 @@ div.container, div.ng-scope {
 }
 
 .btn-splash-img {
+    float:left;
     max-width: 50%;
-    max-height: 70px;
+    max-height: 80px;
 }
 
 .span-cat {
@@ -203,6 +208,7 @@ div .angular-google-map {
     text-align: center;
     margin-left: -20px;
     padding-right: 20px;
+    z-index: 10;
 }
 
 
@@ -233,14 +239,18 @@ div .angular-google-map {
     padding: 5px;
 }
 .side-list a{
-    border-radius: 5px;
+    border-radius: 10px;
     display: block;
     text-decoration: none;
-    padding:10px;
+    padding:20px;
 }
 .side-list a:hover, .side-list a:active{
     color: #fafafa;
     text-decoration: none;
     background-color: black;
     font-weight: bold;
+}
+
+#sp-page{
+    width: 95% !important;
 }
