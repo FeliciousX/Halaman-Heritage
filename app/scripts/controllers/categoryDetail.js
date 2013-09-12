@@ -267,7 +267,7 @@ angular.module('halamanHeritageApp')
 		  "web":""
 		}
 	];
-     
+
      //TODO: Change lng to lat and vice versa
     toMaps.set = true;
     toMaps.latitude = $scope.category[$routeParams.placeId - 1].lng;
