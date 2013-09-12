@@ -1,6 +1,6 @@
 [
   {
-    "category":"accomodation",
+    "category":"Accomodation",
     "places":
       [
         {
@@ -102,7 +102,7 @@
       ]
   },
   {
-    "category":"conveniencestore",
+    "category":"Convenience Store",
     "places":
       [
         {
@@ -200,7 +200,7 @@
       ]
   },
   {
-    "category":"financialinstitution",
+    "category":"Financial Institution",
     "places":
       [
         {
@@ -258,7 +258,7 @@
       ]
   },
   {
-    "category":"laundry",
+    "category":"Laundry",
     "places":
       [
         {
@@ -280,7 +280,7 @@
       ]
   },
   {
-    "category":"nightspots",
+    "category":"Night Spots",
     "places":
       [
         {
@@ -314,7 +314,7 @@
       ]
   },
   {
-    "category":"restaurants",
+    "category":"Restaurants",
     "places":
     [
         {

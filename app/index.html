@@ -11,16 +11,14 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!--Google Fonts-->
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/ng-mobile-menu/dist/ng-mobile-menu.min.css">
+    <link rel="stylesheet" href="bower_components/angular-ui/build/angular-ui.css">
+    <!-- endbuild -->
 
-        <!-- build:css({.tmp,app}) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="bower_components/angular-ui/build/angular-ui.css">
-        <!-- endbuild -->
-
-        <!-- Latest compiled and minified CSS -->
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
 
 
 
@@ -36,7 +34,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div ng-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -52,6 +50,7 @@
     <script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
 
         <!-- build:js scripts/modules.js -->
+        <script src="bower_components/ng-mobile-menu/dist/ng-mobile-menu.min.js"></script>
         <script src="bower_components/angular-ui/build/angular-ui.js"></script>
         <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
         <script src="bower_components/angular-resource/angular-resource.js"></script>
