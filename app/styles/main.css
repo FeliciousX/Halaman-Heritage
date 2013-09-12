@@ -12,7 +12,7 @@ div.container, div.ng-scope {
 }
 
 .hero-unit{
-    padding-top: 0px !important;
+    padding-top: 0px !important;    
 }
 #map_canvas {
     height:100%;
@@ -91,6 +91,7 @@ ul li{
     margin-top: -7px;
     margin-right: 5px;
 }
+
 .category-list > .accordion-heading > a {
     text-decoration: none;
     font-size: 100%;
@@ -188,9 +189,10 @@ div .angular-google-map {
     bottom: 0px;
     width: 100%;
     text-align: center;
+    z-index: 10;
     margin-left: -20px;
     padding-right: 20px;
-    z-index: 10;
+    opacity: 0.9;
 }
 
 
@@ -235,11 +237,12 @@ div .angular-google-map {
 
 #sp-page{
     width: 95% !important;
+    padding-bottom: 60px !important;
 }
 
 
 /*When media less than size*/
-@media only screen and (max-width: 600px)
+@media only screen and (max-width: 400px)
 {
     .btn-splash {
         width: 100%;
@@ -259,5 +262,14 @@ div .angular-google-map {
     }
     .nav-button{
         width: 30px;
+    }
+}
+@media only screen and (max-height: 500px)
+{
+    #sp-page {
+        padding-bottom: 50px !important;
+    }        
+    .accordion{
+        padding-bottom: 40px !important;
     }
 }
