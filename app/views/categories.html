@@ -7,12 +7,11 @@
   </div>
   <accordion close-others="{{oneAtATime}}">
     <accordion-group ng-repeat="list in category | filter:search" heading="{{list.category}}" class="category-list hero-unit">
-      <ul>
-        <li ng-repeat="places in list.places | filter:search">
-          <!-- TODO: Include image name for each category in DB -->
-          <a href="#/category/{{list.category}}/{{places.id}}/details">{{places.name}}</a>
-        </li>
-      </ul>
+    <ul>
+      <li ng-repeat="places in list.places[$index]">
+        <a href="#/category/{{list.raw}}/{{places.id}}/details">{{places.name}}</a>
+      </li>
+    </ul>
     </accordion-group>
   </accordion>
 </div>
