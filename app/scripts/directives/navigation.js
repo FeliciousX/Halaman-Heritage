@@ -11,8 +11,7 @@ angular.module('halamanHeritageApp')
 									'</ul>',*/ // CHANGED: Used templateUrl instead of template
       templateUrl: 'views/templates/menu.html',
       restrict: 'E',
-      controller: function ($scope, meny) {
-      	var meny = Meny.create(meny.menyInit());
+      controller: function ($scope) {
       }
     };
   });
