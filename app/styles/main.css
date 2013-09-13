@@ -50,6 +50,7 @@ div.container, div.ng-scope {
 
 .span-maps {
     text-align: center;
+    padding-bottom: 40px !important;
 }
 
 ul{
@@ -74,8 +75,7 @@ ul li{
 }
 
 .main-content{
-   background-image: url(../img/back_g.png) ;
-   /*margin-top: -13px;*/
+   background-image: url(../img/back_g.png);
    padding-left: 3px;
    padding-top: 15px;
 }
@@ -104,9 +104,6 @@ ul li{
     padding-right: 30px;
     max-width: 100px;
     max-height: 100px;
-}
-.accordion-heading a:hover, .accordion-heading a:active{
-    /*color: #f7f7f7 !important;*/
 }
 .accordion-group{
     padding: 0 !important;
@@ -165,7 +162,7 @@ hr.carved {
     -webkit-animation-fill-mode: forwards;
     -webkit-animation-delay: 0.1s;
 }
-}
+
 .img-det{
     margin-top: 30px;
 }
@@ -257,6 +254,7 @@ div .angular-google-map {
     padding-left: 30px;
 }
 .side-nav h2{
+    margin-top: 5%;
     margin-left: -10px;
     font-weight: normal;
 }
@@ -350,7 +348,7 @@ div .angular-google-map {
     #sp-page {
         padding-bottom: 50px !important;
     }        
-    .accordion{
+    .accordion {
         padding-bottom: 40px !important;
     }
 }
