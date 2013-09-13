@@ -20,14 +20,14 @@ div.container, div.ng-scope {
     margin:3px;
 }
 .btn{
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: auto;
-    border: orange solid 3px !important;
+    border: silver solid 1px !important;
     background-image: none !important;
 }
 .btn-splash {
-    width: 450px;
-    height: 135px;
+    width: 500px;
+    height: 120px;
 }
 .btn-splash h2{
     padding-top: 3%;
@@ -91,7 +91,6 @@ ul li{
     margin-top: -7px;
     margin-right: 5px;
 }
-
 .category-list > .accordion-heading > a {
     text-decoration: none;
     font-size: 100%;
@@ -122,18 +121,55 @@ ul li{
     color: gray;
 }
 
-hr{
-    border-color: gray !important;
+hr.carved {
+  clear: both; 
+  float: none; 
+  width: 100%; 
+  height: 2px;
+  margin: 1.4em 0;
+  border: none; 
+  background: #ddd;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0.5, rgb(221,221,221)),
+      color-stop(0.5, rgb(255,255,255))
+  );
+  background-image: -moz-linear-gradient(
+      center top,
+      rgb(221,221,221) 50%,
+      rgb(255,255,255) 50%
+  );
 }
 .row{
     font-family: 'Segoe UI';
     font-weight: lighter;
     color: #505050 !important;
 }
-
-.cat-details {;
+.cat-details {
+    font-size: 18px;
     padding-left: 40px !important;
+    opacity: 0;
+    animation: category-list 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation: category-list 1s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.1s;
 }
+.hero-unit > .row > h3{
+    opacity: 0;
+    animation: category-list 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation: category-list 1s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.1s;
+}
+}
+.img-det{
+    margin-top: 30px;
+}
+
 .meny-left > .meny {
     opacity: 0;
 }
@@ -170,7 +206,7 @@ div .angular-google-map {
 
 /*HEADER & FOOTER*/
 #header, #footer{
-    font-family: "Segoe UI";
+    font-family: "Roboto";
     color: white;
     background-color: orange;
     height: 30px;
@@ -178,14 +214,27 @@ div .angular-google-map {
 }
 
 #header{
+    font-weight: bold;
+    font-family: "Cinzel";
+    font-weight: normal;
+    font-size: 20px;
     padding-top: 10px;
     margin-left: -20px;
     margin-right: -20px;
     margin-bottom: 1%;
 }
+#header a{
+    text-decoration: none;
+    color: white;
+}
+.favicon{
+    padding-top: 5px;
+    margin-right: 3px;
+}
 
 #footer{
     position: fixed;
+    font-size: 12px;
     bottom: 0px;
     width: 100%;
     text-align: center;
@@ -198,12 +247,12 @@ div .angular-google-map {
 
 /*SIDE NAVIGATION BAR*/
 .side-nav{
-    font-family: "segoe UI";
+    background-image: url(../img/back_g.jpg);
     color: #505050;
+    height: 100%;
+    font-family: "Roboto";    
     opacity: 1;
     margin-top: 46px;
-    height: 100%;
-    background-image: url(../img/back_g.jpg);
     font-size: 20px;
     padding-left: 30px;
 }
@@ -212,10 +261,11 @@ div .angular-google-map {
     font-weight: normal;
 }
 .side-nav a{
-    color: black; 
+    color: black;
 }
 .side-list{
-    background-color: #fafafa;
+    border-radius: 10px;
+    background-color: orange;
     opacity: 0.7;
     width: 100%;
 }
@@ -223,6 +273,7 @@ div .angular-google-map {
     padding: 5px;
 }
 .side-list a{
+    color: white;
     border-radius: 10px;
     display: block;
     text-decoration: none;
@@ -231,8 +282,7 @@ div .angular-google-map {
 .side-list a:hover, .side-list a:active{
     color: #fafafa;
     text-decoration: none;
-    background-color: black;
-    font-weight: bold;
+    background-color: #ff4c00;
 }
 
 #sp-page{
@@ -252,7 +302,7 @@ div .angular-google-map {
         font-size: 120%;
     }
     .category-list > .accordion-heading > a{
-        font-size: 80%;
+        font-size: 90%;
     }
     .accordion-image {
         padding-right: 10px;
@@ -263,7 +313,38 @@ div .angular-google-map {
     .nav-button{
         width: 30px;
     }
+    .accordion-image{
+        max-height: 20%;
+        max-width: 20%;
+    }
+    ul{
+        list-style-image: url(../img/bullet_small.png);
+    }
+    li{
+        font-size: 15px;
+    }
+    .hero-unit > .row > h3{
+        font-size: 15px;
+    }
+    .cat-details{
+        font-size: 14px;
+        padding: 0 !important;
+    }
+    .cat-det{
+        padding: 20px !important;
+    }
+    .nav-button{
+        width: 60px;
+    }
+    .row h3{
+        height: 30px;
+
+    }
+    hr{
+        margin-bottom: 0 !important;
+    }
 }
+
 @media only screen and (max-height: 500px)
 {
     #sp-page {
