@@ -6,10 +6,10 @@
     <input type="text" ng-model="search.$">
   </div>
   <accordion close-others="{{oneAtATime}}">
-    <accordion-group ng-repeat="list in category | filter:search" heading="{{list.category}}" class="category-list hero-unit">
+    <accordion-group ng-repeat="list in categories | filter:search" heading="{{list.name}}" class="category-list hero-unit">
     <ul>
-      <li ng-repeat="places in list.places[$index]">
-        <a href="#/category/{{list.raw}}/{{places.id}}/details">{{places.name}}</a>
+      <li ng-repeat="places in list.places | filter:search">
+        <a href="#/category/{{list.rawName}}/{{places.id}}/details">{{places.Name}}</a>
       </li>
     </ul>
     </accordion-group>
