@@ -69,7 +69,8 @@ angular.module('halamanHeritageApp')
 													markers.push({
 														latitude: place.Latitude,
 														longitude: place.Longitude,
-														infoWindow: '<h3>' + place.Name + '</h3><p><a href="#/category/' + name + '/' + place.id + '/details">More details..</a></p>'
+														infoWindow: '<h3>' + place.Name + '</h3><p><a href="#/category/' + name + '/' + place.id + '/details">More details..</a></p>',
+														icon: 'img/markers/' + name + '.png'
 													});
 												});
 											});
