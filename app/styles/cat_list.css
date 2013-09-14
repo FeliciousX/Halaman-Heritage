@@ -1,0 +1,51 @@
+/*CATEGORIES LIST*/
+
+.category-list {
+    font-family: 'Segoe UI';
+    font-size:18px;
+    opacity: 0;
+    width: 97% !important;
+    padding: 5px 10px 5px 0px !important;
+    margin: 0px 0px 0px 0px;
+    animation: category-list 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation: category-list 1s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.1s;
+}
+
+ul{
+    list-style-image: url(../img/bullet.png);
+}
+ul li{
+    padding-bottom: 5px;
+}
+.category-list > .accordion-heading > a {
+    text-decoration: none;
+    font-size: 100%;
+    color: #505050;
+}
+.accordion-heading, .accordion-toggle{
+   background: linear-gradient(transparent 10%, #f2f2f2);
+   padding: 0px !important;
+}
+.accordion-image {
+    padding-right: 30px;
+    max-width: 100px;
+    max-height: 100px;
+}
+.accordion-group{
+    padding: 0 !important;
+    background-color: #ffffff !important;
+    border-color: silver !important;
+}
+.accordion-group a{
+    color: #505050;
+}
+.accordion-group a:hover, .accordion-groupd a:active{
+    text-decoration: none !important;
+    color: gray;
+}
+.accordion {
+        padding-bottom: 40px !important;
+}
