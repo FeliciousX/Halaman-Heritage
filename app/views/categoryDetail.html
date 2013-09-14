@@ -1,25 +1,25 @@
 <navigation id="sp-nav"></navigation>
-<div id='sp-page' class='container-fluid'>
+<div id='sp-page' class='container-fluid main-content map-back'>
 	<button ng-click="$spMenu.toggle()" class="nav-button "><i class="icon-align-justify"></i></button>
-	<div class='hero-unit'>
-	<div class="row">
-	</div>
+	<div class='hero-unit cat-det'>
+		<div class='row'></div>
+			<div class='row cat-details'><img src="../img/photo_na.jpg" class="img-rounded img-det"></div>
+			<hr class="carved"/>
 		<div class='row'><h3>Name</h3></div>
 			<div class='row cat-details'>{{placeDetail.Name}}</div>
-			<hr />
+			<hr class="carved"/>
 		<div class='row'><h3>Opening Hours</h3></div>
-			<div class='row cat-details'>{{placeDetail.opening_hours}}</div>
-			<hr />
+			<div class='row cat-details'>{{placeDetail.Opening_Hours}}</div>
+			<hr class="carved" />
 		<div class='row'><h3>Address</h3></div>
 			<div class='row cat-details'>{{placeDetail.Location}}</div>
-			<hr />
+			<hr class="carved"/>
 		<div class='row'><h3>Price Range</h3></div>
 			<div class='row cat-details'>{{placeDetail.Price_Range}}</div>
-			<hr />
+			<hr class="carved"/>
 		<div class='row'><h3>Description</h3></div>
 			<div class='row cat-details'>{{placeDetail.Description}}</div>
-			<hr />
-
+			<hr class="carved" />
 		<div class='row'><h3>Maps</h3></div>
 			<div class='row cat-details'><a href="#/maps/"><btn class="btn">Locate in maps..</btn></a></div>
 	</div>
