@@ -6,7 +6,7 @@ angular.module('halamanHeritageApp')
 			getData: function() {
 								var deffered = $q.defer();
 
-								// TODO: change this to query using POSt on php during production
+								// TODO: change this to query using POST on php during production
 								$http.get('places/categories.json').then(function(result) {
 									var parents = result.data;
 									var categories = [];
@@ -17,6 +17,7 @@ angular.module('halamanHeritageApp')
 											$http.get('places/' + name + '.json').then(function(result) {
 												var places = result.data;
 												var prettify = name.split('_').join(' ');
+
 												categories.push(
 													{
 														rawName: name,
@@ -41,7 +42,6 @@ angular.module('halamanHeritageApp')
 					angular.forEach(result.data, function(place, key){
 						if (place.id == id) {
 							details = place;
-							console.log(details);
 						};
 					});
 
@@ -49,6 +49,37 @@ angular.module('halamanHeritageApp')
 				});
 
 				return deffered.promise;
+			},
+
+			getMarkers: function() {
+								var deffered = $q.defer();
+
+								// TODO: change this to query using POST on php during production
+								$http.get('places/categories.json').then(function(result) {
+									var parents = result.data;
+									var markers = [];
+
+									angular.forEach(result.data, function(value, key){
+										angular.forEach(value, function(name, tables){
+
+											$http.get('places/' + name + '.json').then(function(result) {
+												var places = result.data;
+
+												angular.forEach(places, function(place, key2){
+													markers.push({
+														latitude: place.Latitude,
+														longitude: place.Longitude,
+														infoWindow: '<h3>' + place.Name + '</h3><p><a href="#/category/' + name + '/' + place.id + '/details">More details..</a></p>'
+													});
+												});
+											});
+										});
+									});
+
+									deffered.resolve(markers);
+								});
+
+								return deffered.promise;
 			}
     }
   });
