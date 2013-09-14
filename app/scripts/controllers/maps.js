@@ -3,7 +3,7 @@
 angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, services, toMaps) {
 
   $scope.center = { // by default, centers to Plaza Merdeka
-    latitude: 1.55819,
+    latitude: 1.55829,
     longitude: 110.343938,
   };
 
