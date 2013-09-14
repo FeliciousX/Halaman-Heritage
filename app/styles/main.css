@@ -49,6 +49,10 @@ div.container, div.ng-scope {
     padding-bottom: 40px !important;
 }
 
+.accordion {
+    padding-bottom: 40px !important;
+}
+
 ul{
     list-style-image: url(../img/bullet.png);
 }
@@ -349,7 +353,4 @@ div .angular-google-map {
     #sp-page {
         padding-bottom: 50px !important;
     }        
-    .accordion {
-        padding-bottom: 40px !important;
-    }
 }
