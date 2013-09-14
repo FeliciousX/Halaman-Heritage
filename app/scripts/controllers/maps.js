@@ -2,10 +2,9 @@
 
 angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, services, toMaps) {
 
-  $scope.center = { // by default, centers to Swinburne.
-    // TODO: Centers to Plaza Merdeka by default
-    latitude: 1.532528,
-    longitude: 110.358052,
+  $scope.center = { // by default, centers to Plaza Merdeka
+    latitude: 1.55819,
+    longitude: 110.343938,
   };
 
   $scope.markers = [];
@@ -15,9 +14,9 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, se
   $scope.zoom = 15;
   $scope.fit = true;
 
-  services.getMarkers().then(function(result) {
-    $scope.markers = result;
-    if (navigator.geolocation) {
+  var marker = [];
+
+  if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
         if(toMaps.set) {
           toMaps.set = false;
@@ -48,6 +47,9 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, se
 
       });
     };
+
+  services.getMarkers().then(function(result) {
+    $scope.markers = result;
   });
 
 });

@@ -9,9 +9,9 @@ angular.module('halamanHeritageApp')
     services.getDetail($scope.category, $scope.placeId)
     .then(function(result) {
         toMaps.set = true;
-        toMaps.latitude = result.Latitude;
-        toMaps.longitude = result.Longitude;
-        toMaps.infoWindow = '<h3>' + result.Name + '</h3><p><a href="#/category/' + $routeParams.categoryId + '/' + $routeParams.placeId + '/details">More details..</a></p>'
+        toMaps.latitude = result.latitude;
+        toMaps.longitude = result.longitude;
+        toMaps.infoWindow = '<h3>' + result.name + '</h3><p><a href="#/category/' + $routeParams.categoryId + '/' + $routeParams.placeId + '/details">More details..</a></p>'
         toMaps.id = result.id;
 
         $scope.placeDetail = result;

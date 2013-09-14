@@ -9,7 +9,7 @@
     <accordion-group ng-repeat="list in categories | filter:search" heading="{{list.name}}" class="category-list hero-unit">
     <ul>
       <li ng-repeat="places in list.places | filter:search">
-        <a href="#/category/{{list.rawName}}/{{places.id}}/details">{{places.Name}}</a>
+        <a href="#/category/{{list.rawName}}/{{places.id}}/details">{{places.name}}</a>
       </li>
     </ul>
     </accordion-group>
