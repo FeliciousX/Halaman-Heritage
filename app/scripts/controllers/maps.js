@@ -39,7 +39,8 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, se
         $scope.markers.push({ // adding marker on ur current location
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
-          infoWindow: 'You are here!'
+          infoWindow: 'You are here!',
+          icon: 'img/markers/you.png'
         });
 
         $scope.$apply();
