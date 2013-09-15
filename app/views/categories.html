@@ -5,6 +5,9 @@
     <span class="add-on"><i class="icon-search"></i></span>
     <input type="text" ng-model="search.$">
   </div>
+  <div ng-switch="(categories | filter:search).length">
+    <p ng-switch-when="0">Sorry, no results found for "{{search.$}}"</p>
+  </div>
   <accordion close-others="{{oneAtATime}}">
     <accordion-group ng-repeat="list in categories | filter:search" heading="{{list.name}}" class="category-list hero-unit">
     <ul>
