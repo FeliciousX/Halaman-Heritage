@@ -22,6 +22,17 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, se
           toMaps.set = false;
           console.log(toMaps.latitude);
           console.log(toMaps.longitude);
+          if(toMaps.directions) {
+            toMaps.directions = false;
+            $scope.directions = {
+              originLat: position.coords.latitude,
+              originLng: position.coords.longitude,
+              destLat: toMaps.latitude,
+              destLng: toMaps.longitude,
+              destination: new google.maps.LatLng(toMaps.latitude, toMaps.longitude),
+            };
+            
+          }
           $scope.zoom = 17;
           $scope.center = {
             latitude: toMaps.latitude,
