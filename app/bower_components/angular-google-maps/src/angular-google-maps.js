@@ -68,7 +68,10 @@
         _windows = [],  // InfoWindow objects
         o = angular.extend({}, _defaults, opts),
         that = this,
-        currentInfoWindow = null;
+        currentInfoWindow = null,
+        directions = null,
+        directionsDisplay = null,
+        directionsService = new google.maps.DirectionsService();
 
       this.center = opts.center;
       this.zoom = o.zoom;
@@ -86,9 +89,10 @@
         }
 
         if (_instance == null) {
+          // Initialize directionsDisplay
+          directionsDisplay = new google.maps.DirectionsRenderer();
 
           // Create a new map instance
-
           _instance = new google.maps.Map(that.selector, angular.extend(that.options, {
             center: that.center,
             zoom: that.zoom,
@@ -96,6 +100,9 @@
             mapTypeId : google.maps.MapTypeId.ROADMAP,
             disableDefaultUI: true
           }));
+
+          // Set directionsDisplay map
+          directionsDisplay.setMap(_instance);
 
           google.maps.event.addListener(_instance, "dragstart",
 
@@ -306,6 +313,19 @@
           v.setMap(null);
         });
       };
+
+      this.getDirections = function (originLat, originLng, destLat, destLng) {
+        var request = {
+              origin: new google.maps.LatLng(originLat, originLng),
+              destination: new google.maps.LatLng(destLat, destLng),
+              travelMode: google.maps.DirectionsTravelMode.DRIVING
+            };
+        directionsService.route(request, function(response, status) {
+          if(status == google.maps.DirectionStatus.OK) {
+            directionDisplay.setDirections(response);
+          }
+        });
+      }
     }
 
     // Done
@@ -559,6 +579,12 @@
           _m.zoom = newValue;
           _m.draw();
         });
+
+        scope.$watch("directions", function (newValue, oldValue) {
+
+          _m.getDirections(newValue.originLat, newValue.originLng, newValue.destLat, newValue.destLng);
+
+        }, true);
       }
     };
   }]);
