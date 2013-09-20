@@ -1,5 +1,5 @@
 'use strict';
-
+// TODO: divide to multiple services for multiple queries.
 angular.module('halamanHeritageApp')
   .factory('services', function ($http, $q) {
     return {
@@ -69,7 +69,9 @@ angular.module('halamanHeritageApp')
 													markers.push({
 														latitude: place.latitude,
 														longitude: place.longitude,
-														infoWindow: '<h3>' + place.name + '</h3><p><a href="#/category/' + name + '/' + place.id + '/details">More details..</a></p>',
+														infoWindow: '<h3>' + place.name + '</h3>' +
+																				'<p><a class="btn" href="#/category/' + name + '/' + place.id + '/details">More details</a>' +
+																				'<a class="btn" href="#/maps/' + place.latitude + '/' + place.longitude +  '/navigate">Navigate Here</a></p>', //TODO implement navigation!
 														icon: 'img/markers/' + name + '.png'
 													});
 												});
