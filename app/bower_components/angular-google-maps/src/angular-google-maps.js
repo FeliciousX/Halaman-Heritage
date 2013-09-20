@@ -69,7 +69,6 @@
         o = angular.extend({}, _defaults, opts),
         that = this,
         currentInfoWindow = null,
-        directions = null,
         directionsDisplay = null,
         directionsService = new google.maps.DirectionsService();
 
@@ -80,6 +79,13 @@
       this.selector = o.container;
       this.markers = [];
       this.options = o.options;
+      this.directions = {
+        originLat: null,
+        originLng: null,
+        destLat: null,
+        destLng: null,
+        destination: null,
+      };
 
       this.draw = function () {
 
@@ -318,11 +324,11 @@
         var request = {
               origin: new google.maps.LatLng(originLat, originLng),
               destination: new google.maps.LatLng(destLat, destLng),
-              travelMode: google.maps.DirectionsTravelMode.DRIVING
+              travelMode: google.maps.DirectionsTravelMode.WALKING
             };
         directionsService.route(request, function(response, status) {
-          if(status == google.maps.DirectionStatus.OK) {
-            directionDisplay.setDirections(response);
+          if(status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
           }
         });
       }
@@ -369,7 +375,8 @@
         zoom: "=zoom", // required
         refresh: "&refresh", // optional
         windows: "=windows", // optional
-        events: "=events"
+        events: "=events",
+        directions: "=directions"
       },
       controller: controller,
       link: function (scope, element, attrs, ctrl) {
@@ -581,7 +588,7 @@
         });
 
         scope.$watch("directions", function (newValue, oldValue) {
-
+          if (newValue == oldValue) { return; };
           _m.getDirections(newValue.originLat, newValue.originLng, newValue.destLat, newValue.destLng);
 
         }, true);

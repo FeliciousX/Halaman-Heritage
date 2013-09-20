@@ -1,6 +1,9 @@
 'use strict';
 
-angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, services, toMaps) {
+angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, $routeParams, services, toMaps) {
+
+  $scope.lat = $routeParams.lat;
+  $scope.lng = $routeParams.lng;
 
   $scope.center = { // by default, centers to Plaza Merdeka
     latitude: 1.55829,
@@ -22,17 +25,6 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, se
           toMaps.set = false;
           console.log(toMaps.latitude);
           console.log(toMaps.longitude);
-          if(toMaps.directions) {
-            toMaps.directions = false;
-            $scope.directions = {
-              originLat: position.coords.latitude,
-              originLng: position.coords.longitude,
-              destLat: toMaps.latitude,
-              destLng: toMaps.longitude,
-              destination: new google.maps.LatLng(toMaps.latitude, toMaps.longitude),
-            };
-            
-          }
           $scope.zoom = 17;
           $scope.center = {
             latitude: toMaps.latitude,
@@ -53,6 +45,16 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, se
           icon: 'img/markers/you.png'
         });
 
+        if($scope.lat != null && $scope.lng != null) {
+          $scope.directions = {
+            originLat: position.coords.latitude,
+            originLng: position.coords.longitude,
+            destLat: $scope.lat,
+            destLng: $scope.lng,
+            destination: new google.maps.LatLng($scope.lat, $scope.lng),
+          };
+        }
+
         $scope.$apply();
       }, function () {
 
@@ -62,5 +64,9 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, se
   services.getMarkers().then(function(result) {
     $scope.markers = result;
   });
+
+  $scope.navigate = function() {
+    alert("Hello");
+  };
 
 });
