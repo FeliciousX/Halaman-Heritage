@@ -2926,7 +2926,7 @@ angular.module("template/accordion/accordion-group.html", []).run(["$templateCac
     "<div class=\"accordion-group\">\n" +
     "  <div class=\"accordion-heading\" ><a class=\"accordion-toggle\" ng-click=\"isOpen = !isOpen\" accordion-transclude=\"heading\"><img class=\"accordion-image\" ng-src=\"img/{{heading}}.png\" />{{heading}}</a></div>\n" +
     "  <div class=\"accordion-body\" collapse=\"!isOpen\">\n" +
-    "    <div class=\"accordion-inner\" ng-transclude></div>  </div>\n" +
+    "    <div class=\"accordion-inner list-light\" ng-transclude></div>  </div>\n" +
     "</div>");
 }]);
 
