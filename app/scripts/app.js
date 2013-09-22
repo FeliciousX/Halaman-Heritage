@@ -13,7 +13,7 @@ angular.module('halamanHeritageApp', ['shoppinpal.mobile-menu', 'ui.bootstrap', 
       })
       .when('/maps', { // TODO: resolves markers before loading
         templateUrl: 'views/maps.html',
-        controller: 'MapsCtrl'
+        controller: 'MapsCtrl',
       })
       .when('/maps/:lat/:lng/navigate', {
         templateUrl: 'views/maps.html',
@@ -27,6 +27,7 @@ angular.module('halamanHeritageApp', ['shoppinpal.mobile-menu', 'ui.bootstrap', 
         controller: 'CategoriesCtrl'
       })
       .otherwise({
-        redirectTo: '/404'
+        templateUrl: 'views/404.html',
+        controller: 'ErrCtrl'
       });
   });

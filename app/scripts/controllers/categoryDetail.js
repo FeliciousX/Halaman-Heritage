@@ -17,6 +17,5 @@ angular.module('halamanHeritageApp')
         $scope.placeDetail = result;
 
         if ($scope.placeDetail.picture == null) { $scope.placeDetail.picture = "../img/photo_na.jpg"; }
-        else                                    { $scope.placeDetail.picture = "../img/" + $scope.placeDetail.picture; }
     });
   });
