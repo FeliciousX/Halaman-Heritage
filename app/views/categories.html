@@ -9,7 +9,7 @@
     <p ng-switch-when="0">Sorry, no results found for "{{search.$}}"</p>
   </div>
   <accordion close-others="{{oneAtATime}}">
-    <accordion-group ng-repeat="list in categories | filter:search" heading="{{list.name}}" class="category-list hero-unit">
+    <accordion-group ng-repeat="list in categories | filter:search" heading="{{list.name}}" class="category-list hero-unit" ng-click="filters(list.name)">
     <ul>
       <li ng-repeat="places in list.places | filter:search">
         <a href="#/category/{{list.rawName}}/{{places.id}}/details">{{places.name}}</a>

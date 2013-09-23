@@ -14,17 +14,26 @@ angular.module('halamanHeritageApp', ['shoppinpal.mobile-menu', 'ui.bootstrap', 
       .when('/maps', { // TODO: resolves markers before loading
         templateUrl: 'views/maps.html',
         controller: 'MapsCtrl',
+        resolve: {
+          markers: services.getMarkers
+        }
       })
       .when('/maps/:lat/:lng/navigate', {
         templateUrl: 'views/maps.html',
-        controller: 'MapsCtrl'
+        controller: 'MapsCtrl',
+        resolve: {
+          markers: services.getMarkers
+        }
       })
       .when('/category/:categoryId/:placeId/details', {
         templateUrl: 'views/categoryDetail.html',
         controller: 'CategorydetailCtrl'
       }).when('/categories', { // TODO: resolves data before loading
         templateUrl: 'views/categories.html',
-        controller: 'CategoriesCtrl'
+        controller: 'CategoriesCtrl',
+        resolve: {
+          categories: services.getData
+        }
       })
       .otherwise({
         templateUrl: 'views/404.html',
