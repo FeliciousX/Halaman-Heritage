@@ -1,6 +1,6 @@
 'use strict';
 // TODO: divide to multiple services for multiple queries.
-angular.module('halamanHeritageApp')
+var services = angular.module('halamanHeritageApp')
   .factory('services', function ($http, $q) {
     return {
 			getData: function() {
@@ -86,6 +86,20 @@ angular.module('halamanHeritageApp')
 			}
     }
   });
+
+services.getMarkers = function($q, services) {
+            var defer = $q.defer();
+
+            defer.resolve(services.getMarkers());
+            return defer.promise;
+          };
+
+services.getData = function ($q, services) {
+            var defer = $q.defer();
+
+            defer.resolve(services.getData());
+            return defer.promise;
+          };
 
 function ucwords (str) {
   // http://kevin.vanzonneveld.net
