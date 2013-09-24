@@ -5,15 +5,9 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, $r
   $scope.lat = $routeParams.lat;
   $scope.lng = $routeParams.lng;
 
-  $scope.center = { // by default, centers to Plaza Merdeka
-    latitude: 1.55829,
-    longitude: 110.343938,
-  };
-
   $scope.markers = [];
   $scope.windows = [];
 
-  $scope.markClick = true;
   $scope.zoom = 15;
   $scope.fit = true;
 
@@ -29,6 +23,16 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, $r
     $scope.center = {
       latitude: toMaps.latitude,
       longitude: toMaps.longitude
+    };
+
+    $scope.locate = {
+      latitude: toMaps.latitude,
+      longitude: toMaps.longitude
+    }
+  } else {
+    $scope.center = { // by default, centers to Plaza Merdeka
+      latitude: 1.55829,
+      longitude: 110.343938,
     };
   };
 
@@ -62,7 +66,7 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, $r
 
       $scope.$apply();
     }, function () {
-      alert("Please enable GPS and allow sharing location to gain full advantages of this web app.")
+      alert("Please enable GPS and share location to fully utilize this web application");
     });
   }
   else {
