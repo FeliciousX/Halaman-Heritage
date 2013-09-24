@@ -57,7 +57,7 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, $r
 
         $scope.$apply();
       }, function () {
-
+        alert("Please enable GPS and share location to fully utilize this web application");
       });
     };
 
@@ -65,8 +65,5 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, $r
     $scope.markers = result;
   });
 
-  $scope.navigate = function() {
-    alert("Hello");
-  };
 
 });
