@@ -2,6 +2,40 @@
 // TODO: divide to multiple services for multiple queries.
 angular.module('halamanHeritageApp')
   .factory('services', function ($http, $q) {
+  	var markers = function() {
+			var deffered = $q.defer();
+
+			// TODO: change this to query using POST on php during production
+			$http.get('places/categories.json').then(function(result) {
+				var parents = result.data;
+				var markers = [];
+
+				angular.forEach(result.data, function(value, key){
+					angular.forEach(value, function(name, tables){
+
+						$http.get('places/' + name + '.json').then(function(result) {
+							var places = result.data;
+
+							angular.forEach(places, function(place, key2){
+								markers.push({
+									latitude: place.latitude,
+									longitude: place.longitude,
+									infoWindow: '<h3>' + place.name + '</h3>' +
+															'<p><a class="btn" href="#/category/' + name + '/' + place.id + '/details">More details</a>' +
+															'<a class="btn" href="#/maps/' + place.latitude + '/' + place.longitude +  '/navigate">Navigate Here</a></p>', //TODO implement navigation!
+									icon: 'img/markers/' + name + '.png'
+								});
+							});
+						});
+					});
+				});
+
+				deffered.resolve(markers);
+			});
+
+			return deffered.promise;
+		};
+
     return {
 			getData: function() {
 								var deffered = $q.defer();
@@ -51,39 +85,7 @@ angular.module('halamanHeritageApp')
 				return deffered.promise;
 			},
 
-			getMarkers: function() {
-								var deffered = $q.defer();
-
-								// TODO: change this to query using POST on php during production
-								$http.get('places/categories.json').then(function(result) {
-									var parents = result.data;
-									var markers = [];
-
-									angular.forEach(result.data, function(value, key){
-										angular.forEach(value, function(name, tables){
-
-											$http.get('places/' + name + '.json').then(function(result) {
-												var places = result.data;
-
-												angular.forEach(places, function(place, key2){
-													markers.push({
-														latitude: place.latitude,
-														longitude: place.longitude,
-														infoWindow: '<h3>' + place.name + '</h3>' +
-																				'<p><a class="btn" href="#/category/' + name + '/' + place.id + '/details">More details</a>' +
-																				'<a class="btn" href="#/maps/' + place.latitude + '/' + place.longitude +  '/navigate">Navigate Here</a></p>', //TODO implement navigation!
-														icon: 'img/markers/' + name + '.png'
-													});
-												});
-											});
-										});
-									});
-
-									deffered.resolve(markers);
-								});
-
-								return deffered.promise;
-			}
+			getMarkers: markers,
     }
   });
 
