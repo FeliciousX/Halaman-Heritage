@@ -7,10 +7,10 @@
  * To change this template use File | Settings | File Templates.
  */
 
-$username = "root";
-$password = "";
+$username = "kuchingh_plaza";
+$password = "plazaswinburne123";
 $host = "localhost";
-$dbname = "halaman_heritage";
+$dbname = "kuchingh_plazamerdeka";
 
 
 //tell mysql we are using utf8
