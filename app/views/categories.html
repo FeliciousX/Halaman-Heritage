@@ -3,10 +3,10 @@
   <button ng-click="$spMenu.toggle()" class="nav-button"><i class="icon-align-justify"></i></button>
   <div class="input-prepend search">
     <span class="add-on"><i class="icon-search"></i></span>
-    <input type="text" ng-model="search.$">
+    <input type="text" ng-model="filterInit.init" placeholder="Search..." ng-bind="search.$ = filterInit.init">
   </div>
   <div ng-switch="(categories | filter:search).length">
-    <p ng-switch-when="0">Sorry, no results found for "{{search.$}}"</p>
+    <p ng-switch-when="0">Sorry, no results found for <i>{{filterInit.init}}</i></p>
   </div>
   <accordion close-others="{{oneAtATime}}">
     <accordion-group ng-repeat="list in categories | filter:search" heading="{{list.name}}" class="category-list hero-unit" ng-click="filters(list.name)">
