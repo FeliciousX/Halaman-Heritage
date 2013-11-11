@@ -1,92 +1,72 @@
 'use strict';
-// TODO: divide to multiple services for multiple queries.
-angular.module('halamanHeritageApp')
-  .factory('services', function ($http, $q) {
-  	var markers = function() {
-			var deffered = $q.defer();
+// TODO: handles errors in promises.
+var services = angular.module('halamanHeritageApp')
+  .factory('services', function ($http) {
 
-			// TODO: change this to query using POST on php during production
-			$http.get('places/categories.json').then(function(result) {
-				var parents = result.data;
-				var markers = [];
+  	var myData = {
+									detailsData: {},
+									categories: [],
+									markers: []
+								};
 
-				angular.forEach(result.data, function(value, key){
-					angular.forEach(value, function(name, tables){
+  	var promise = $http.get('places/categories.json').then(function(result) {
+											var parents = result.data;
+											var markers = [];
 
-						$http.get('places/' + name + '.json').then(function(result) {
-							var places = result.data;
+											angular.forEach(result.data, function(value, key){
+												angular.forEach(value, function(name, tables){
 
-							angular.forEach(places, function(place, key2){
-								markers.push({
-									latitude: place.latitude,
-									longitude: place.longitude,
-									infoWindow: '<h3>' + place.name + '</h3>' +
-															'<p><a class="btn" href="#/category/' + name + '/' + place.id + '/details">More details</a>' +
-															'<a class="btn" href="#/maps/' + place.latitude + '/' + place.longitude +  '/navigate">Navigate Here</a></p>', //TODO implement navigation!
-									icon: 'img/markers/' + name + '.png'
-								});
-							});
-						});
-					});
-				});
+													$http.get('places/' + name + '.json').then(function(result) {
+														var places = result.data;
+														var prettify = name.split('_').join(' ');
 
-				deffered.resolve(markers);
-			});
+														myData.categories.push(
+															{
+																rawName: name,
+																name: ucwords(prettify),
+																places: places
+															});
 
-			return deffered.promise;
-		};
-
-    return {
-			getData: function() {
-								var deffered = $q.defer();
-
-								// TODO: change this to query using POST on php during production
-								$http.get('places/categories.json').then(function(result) {
-									var parents = result.data;
-									var categories = [];
-
-									angular.forEach(result.data, function(value, key){
-										angular.forEach(value, function(name, tables){
-
-											$http.get('places/' + name + '.json').then(function(result) {
-												var places = result.data;
-												var prettify = name.split('_').join(' ');
-
-												categories.push(
-													{
-														rawName: name,
-														name: ucwords(prettify),
-														places: places
+														angular.forEach(places, function(place, key2){
+															myData.markers.push({
+																latitude: place.latitude,
+																longitude: place.longitude,
+																infoWindow: '<h3>' + place.name + '</h3>' +
+																						'<p><a class="btn" href="#/category/' + name + '/' + place.id + '/details">More details</a>' +
+																						'<a class="btn" href="#/maps/' + place.latitude + '/' + place.longitude +  '/navigate">Navigate Here</a></p>', //TODO implement navigation!
+																icon: 'img/markers/' + name + '.png'
+															});
+														});
 													});
+												});
 											});
 										});
-									});
 
-									deffered.resolve(categories);
-								});
-
-								return deffered.promise;
-						},
-
-			getDetail: function(category, id) {
-				var deffered = $q.defer();
-
-				$http.get('places/' + category + '.json').then(function(result) {
-					var details;
-					angular.forEach(result.data, function(place, key){
-						if (place.id == id) {
-							details = place;
-						};
-					});
-
-					deffered.resolve(details);
-				});
-
-				return deffered.promise;
-			},
-
-			getMarkers: markers,
-    }
+		return {
+      promise:promise,
+      setData: function (data) {
+          myData = data;
+      },
+      getData: function () {
+          return myData;
+      },
+      getDetail: function (categoryId, placeId) {
+      	var result = {};
+      	angular.forEach(myData.categories, function(places, key){
+	        if (places.rawName == categoryId) {
+            angular.forEach(places, function(place, key2){
+            	angular.forEach(place, function(item, key3){
+            		  if (item.id == placeId) {
+            		    result = item;
+            		    return;
+            		  };
+            	})
+            });
+	        };
+    		});
+    		return result;
+      }
+    };
   });
 
 function ucwords (str) {

@@ -5,7 +5,12 @@ angular.module('halamanHeritageApp', ['shoppinpal.mobile-menu', 'ui.bootstrap', 
     $routeProvider
       .when('/', {
         templateUrl: 'views/splash.html',
-        controller: 'SplashCtrl'
+        controller: 'SplashCtrl',
+        resolve: {
+            'services': function(services){
+              return services.promise;
+            }
+          }
       })
       .when('/404', {
         templateUrl: 'views/404.html',

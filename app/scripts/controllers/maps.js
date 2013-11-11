@@ -17,7 +17,7 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, $r
   $scope.zoom = 15;
   $scope.fit = true;
 
-  var marker = [];
+  var data = services.getData();
 
   if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
@@ -61,9 +61,7 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, $r
       });
     };
 
-  services.getMarkers().then(function(result) {
-    $scope.markers = result;
-  });
+  $scope.markers = data.markers;
 
 
 });
