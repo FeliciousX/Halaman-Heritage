@@ -1,7 +1,7 @@
 'use strict';
 // TODO: handles errors in promises.
 var services = angular.module('halamanHeritageApp')
-  .factory('services', function ($http) {
+  .factory('services', ['$http', function ($http) {
 
   	var myData = {
 									detailsData: {},
@@ -67,7 +67,7 @@ var services = angular.module('halamanHeritageApp')
     		return result;
       }
     };
-  });
+  }]);
 
 function ucwords (str) {
   // http://kevin.vanzonneveld.net

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, $routeParams, services, toMaps) {
+angular.module('halamanHeritageApp').controller('MapsCtrl', ['$scope', '$routeParams', 'services', 'toMaps', function ($scope, $routeParams, services, toMaps) {
 
   $scope.lat = $routeParams.lat;
   $scope.lng = $routeParams.lng;
@@ -18,7 +18,7 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, $r
   $scope.fit = true;
 
   var data = services.getData();
-
+  $scope.markers = data.markers;
   if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
         if(toMaps.set) {
@@ -60,8 +60,4 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', function ($scope, $r
         alert("Please enable GPS and share location to fully utilize this web application");
       });
     };
-
-  $scope.markers = data.markers;
-
-
-});
+}]);
