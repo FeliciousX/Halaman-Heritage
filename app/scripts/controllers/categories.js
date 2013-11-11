@@ -2,7 +2,9 @@
 // TODO: write e2e tests
 angular.module('halamanHeritageApp')
   .controller('CategoriesCtrl', function ($scope, services, persistFilter) {
-  	$scope.categories = services.getData();
+  	var data = services.getData();
+
+  	$scope.categories = data.categories;
     $scope.oneAtATime = true;
     $scope.filterInit = persistFilter;
   });
