@@ -1,7 +1,7 @@
 'use strict';
 // TODO: beautify page and write tests
 angular.module('halamanHeritageApp')
-    .controller('CategorydetailCtrl', function ($scope, $routeParams, services, toMaps) {
+    .controller('CategorydetailCtrl', ['$scope', '$routeParams', 'services', 'toMaps', function ($scope, $routeParams, services, toMaps) {
     $scope.category = $routeParams.categoryId;
 
     $scope.placeId = $routeParams.placeId;
@@ -16,4 +16,4 @@ angular.module('halamanHeritageApp')
     };
 
     if ($scope.placeDetail.picture == null) { $scope.placeDetail.picture = "../img/photo_na.jpg"; }
-  });
+  }]);

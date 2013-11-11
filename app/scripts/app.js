@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('halamanHeritageApp', ['shoppinpal.mobile-menu', 'ui.bootstrap', 'ui', 'ngResource', 'google-maps'])
-  .config(function ($routeProvider) {
+  .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/splash.html',
@@ -35,4 +35,4 @@ angular.module('halamanHeritageApp', ['shoppinpal.mobile-menu', 'ui.bootstrap', 
         templateUrl: 'views/404.html',
         controller: 'ErrCtrl'
       });
-  });
+  }]);
