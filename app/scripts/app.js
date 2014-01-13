@@ -9,6 +9,7 @@ angular.module('halamanHeritageApp', ['shoppinpal.mobile-menu', 'ui.bootstrap', 
         resolve: {
             'services': function(services){
               return services.promise;
+              // CHANGED: data is preloaded at splash screen
             }
           }
       })
@@ -16,7 +17,7 @@ angular.module('halamanHeritageApp', ['shoppinpal.mobile-menu', 'ui.bootstrap', 
         templateUrl: 'views/404.html',
         controller: 'ErrCtrl'
       })
-      .when('/maps', { // TODO: resolves markers before loading
+      .when('/maps', { // TODO: resolves data if refreshed by redirecting to splash screen
         templateUrl: 'views/maps.html',
         controller: 'MapsCtrl',
       })
@@ -27,7 +28,7 @@ angular.module('halamanHeritageApp', ['shoppinpal.mobile-menu', 'ui.bootstrap', 
       .when('/category/:categoryId/:placeId/details', {
         templateUrl: 'views/categoryDetail.html',
         controller: 'CategorydetailCtrl'
-      }).when('/categories', { // TODO: resolves data before loading
+      }).when('/categories', {
         templateUrl: 'views/categories.html',
         controller: 'CategoriesCtrl'
       })
