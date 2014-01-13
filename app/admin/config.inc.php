@@ -7,10 +7,10 @@
  * To change this template use File | Settings | File Templates.
  */
 
-$username = "root";
-$password = "";
+$username = "kuchingh_max";
+$password = ",ZBs*vL!&6NX";
 $host = "localhost";
-$dbname = "halaman_heritage";
+$dbname = "kuchingh_plazamerdeka";
 
 
 //tell mysql we are using utf8
@@ -44,9 +44,7 @@ $db->setAttribute(
 );
 //Disable magic quotes (it creates weird errors
 if(function_exists(
-        'get_magic_quotes_gpc'
-    ) &&
-    get_magic_quotes_gpc()
+        'get_magic_quotes_gpc')
 ){
     function undo_magic_quotes_gpc(&$array){
         foreach($array as $value){

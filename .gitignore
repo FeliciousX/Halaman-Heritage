@@ -13,3 +13,5 @@ app/bower_components/es5-shim
 app/bower_components/jquery
 app/bower_components/json3
 app/bower_components/ng-mobile-menu
+dist/*
+dist/**/*

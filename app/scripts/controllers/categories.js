@@ -1,11 +1,10 @@
 'use strict';
 // TODO: write e2e tests
 angular.module('halamanHeritageApp')
-  .controller('CategoriesCtrl', function ($scope, $route) {
-  	$scope.categories = $route.current.locals.categories;
-    $scope.oneAtATime = true;
+  .controller('CategoriesCtrl', ['$scope', 'services', 'persistFilter', function ($scope, services, persistFilter) {
+  	var data = services.getData();
 
-    $scope.filters = function(category) {
-    	console.log(category);
-    }
-  });
+  	$scope.categories = data.categories;
+    $scope.oneAtATime = true;
+    $scope.filterInit = persistFilter;
+  }]);

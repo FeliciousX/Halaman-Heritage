@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('halamanHeritageApp')
-  .controller('SplashCtrl', function ($scope) {
+  .controller('SplashCtrl', ['$scope', function ($scope) {
   	$scope.links = {
   		categories: '#/categories',
   		maps: '#/maps'
   	}
-  });
+  }]);
