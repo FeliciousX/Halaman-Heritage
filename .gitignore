@@ -15,3 +15,6 @@ app/bower_components/json3
 app/bower_components/ng-mobile-menu
 dist/*
 dist/**/*
+app/img/places/*
+app/img/places/**/*
+
