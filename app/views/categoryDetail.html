@@ -2,23 +2,27 @@
 <div id='sp-page' class='container-fluid main-content map-back'>
 	<button ng-click="$spMenu.toggle()" class="nav-button "><i class="icon-align-justify"></i></button>
 	<div class='hero-unit cat-det'>
+	<div class='row no-top-bottom-padding'><h4>Name</h4></div>
+			<div class='row cat-details no-top-bottom-padding'><i class="icon-home"></i></span>  {{placeDetail.name}}</div>
 		<div class='row'></div>
 			<div class='row cat-details'><img ng-src="{{placeDetail.picture}}" class="img-rounded img-det"></div>
-			<hr class="carved"/>
-		<div class='row no-top-bottom-padding'><h3>Name</h3></div>
-			<div class='row cat-details no-top-bottom-padding'>{{placeDetail.name}}</div>
-		<div class='row no-top-bottom-padding'><h3>Opening Hours</h3></div>
-			<div class='row cat-details no-top-bottom-padding'>{{placeDetail.opening_hours}}</div>
-		<div class='row no-top-bottom-padding'><h3>Address</h3></div>
-			<div class='row cat-details no-top-bottom-padding'>{{placeDetail.location}}</div>
-		<div class='row no-top-bottom-padding'><h3>Price Range</h3></div>
-			<div class='row cat-details no-top-bottom-padding'>{{placeDetail.price_range}}</div>
-		<div class='row no-top-bottom-padding'><h3>Description</h3></div>
-			<div class='row cat-details no-top-bottom-padding'>{{placeDetail.description}}</div>
-		<div class='row no-top-bottom-padding'><h3>Maps</h3></div>
+	<hr class="carved"/>
+		<div class='row no-top-bottom-padding'><h4>Opening Hours</h4></div>
+			<div class='row cat-details no-top-bottom-padding'><i class="icon-time"></i>  {{placeDetail.opening_hours}}</div>
+	<hr class="carved"/>
+		<div class='row no-top-bottom-padding'><h4>Address</h4></div>
+			<div class='row cat-details no-top-bottom-padding'><i class="icon-envelope"></i>  {{placeDetail.location}}</div>
+	<hr class="carved"/>
+		<div class='row no-top-bottom-padding'><h4>Price Range</h4></div>
+			<div class='row cat-details no-top-bottom-padding'><i class="icon-tag"></i>  {{placeDetail.price_range}}</div>
+	<hr class="carved"/>
+		<div class='row no-top-bottom-padding'><h4>Description</h4></div>
+			<div class='row cat-details no-top-bottom-padding'><i class="icon-list-alt"></i>  {{placeDetail.description}}</div>
+	<hr class="carved"/>
+		<div class='row no-top-bottom-padding'><h4>Maps</h4></div>
 			<div class='row cat-details no-top-bottom-padding'>
-			<a href="#/maps/"><btn class="btn">Locate in maps</btn></a>
-			<a href="#/maps/{{placeDetail.latitude}}/{{placeDetail.longitude}}/navigate"><btn class="btn">Navigate here</btn></a>
+			<a href="#/maps/"><btn class="btn"><i class="icon-map-marker"></i> Locate in maps</btn></a>
+			<a href="#/maps/{{placeDetail.latitude}}/{{placeDetail.longitude}}/navigate"><btn class="btn"><i class="icon-screenshot"></i> Navigate here</btn></a>
 			</div>
 	</div>
 </div>

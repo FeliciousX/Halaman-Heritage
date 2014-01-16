@@ -3,8 +3,7 @@
 .row{
     font-family: 'Arial';
     font-weight: lighter;
-    color: #505050 !important;
-}
+    color: #505050 !important;}
 .cat-details {
     font-size: 18px;
     padding-left: 40px !important;
@@ -28,7 +27,7 @@ hr.carved {
   float: none; 
   width: 100%; 
   height: 2px;
-  margin: 1.4em 0;
+  margin: 0.4em 0;
   border: none; 
   background: #ddd;
   background-image: -webkit-gradient(
