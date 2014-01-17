@@ -1,6 +1,10 @@
 {
   "name": "halaman-heritage",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url" : "https://github.com/FeliciousX/Halaman-Heritage.git"
+    },
   "dependencies": {
     "karma-script-launcher": "~0.1.0",
     "karma-firefox-launcher": "~0.1.0",
