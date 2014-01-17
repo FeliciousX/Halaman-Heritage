@@ -104,7 +104,7 @@
             zoom: that.zoom,
             draggable: that.draggable,
             mapTypeId : google.maps.MapTypeId.ROADMAP,
-            disableDefaultUI: true
+            disableDefaultUI: false
           }));
 
           // Set directionsDisplay map
