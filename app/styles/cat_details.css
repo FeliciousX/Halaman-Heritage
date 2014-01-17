@@ -1,12 +1,19 @@
 /*Category Details*/
-
+.row h5{
+    padding-top: 10px;
+    padding-bottom: 0px;
+    color: #505050 !important;
+    text-shadow: 1px 1px white;
+}
 .row{
-    font-family: 'Arial';
-    font-weight: lighter;
-    color: #505050 !important;}
+    font-family: 'Lucida Sans';
+    color:#505050 ; !important;
+    text-shadow: 0px 1px #aeaeae;
+    
+  }
 .cat-details {
     font-size: 18px;
-    padding-left: 40px !important;
+    padding-left: 20px !important;
     opacity: 0;
     animation: category-list 1s;
     animation-fill-mode: forwards;
@@ -45,5 +52,12 @@ hr.carved {
 }
 
 .img-det{
-    margin-top: 30px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 400px)
+{
+    .row h5{
+      font-size: 11px;
+    }
 }

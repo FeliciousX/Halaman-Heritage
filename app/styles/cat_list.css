@@ -1,8 +1,7 @@
 /*CATEGORIES LIST*/
 
 .category-list {
-    font-family: 'Arial';
-    font-size:18px;
+    font-family: 'Lucida Sans';
     opacity: 0;
     width: 97% !important;
     padding: 5px 10px 5px 0px !important;
@@ -19,7 +18,7 @@ ul{
 
 }
 ul li{
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 ul li a{
     display: block;
@@ -44,8 +43,8 @@ ul li a{
 }
 .accordion-image {
     padding-right: 30px;
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 75px;
+    max-height: 75px;
 }
 .accordion-group{
     padding: 0 !important;

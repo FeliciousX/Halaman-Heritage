@@ -1,4 +1,15 @@
 /*Splash Page*/
+html{
+    font-family: "Lucida Sans"
+}
+.btn h3{
+    font-family: "Calibri";
+    font-weight: lighter;
+    text-shadow: 1px 2px 0.2em lightgray; 
+    color: #444444;
+    padding-top: 2%;
+    font-size: 200%;
+}
 
 .btn{
     margin-top: 10px;
@@ -10,17 +21,27 @@
     width: 500px;
     height: 120px;
 }
-.btn-splash h2{
-    padding-top: 3%;
-    font-size: 25px;
-}
 
 .btn-splash-img {
     float:left;
-    max-width: 50%;
-    max-height: 80px;
+    max-width: 70%;
+    max-height: 70px;
 }
 .banner{
     margin-top: 20px;
     margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 400px)
+{
+    .btn-group-vertical{
+        width: 100%;
+    }
+    .btn h3{
+        font-size: 150%;
+        text-align: left;
+    }
+    .btn-splash-img {
+        padding-right: 10px;
+    }
 }

@@ -2,24 +2,24 @@
 <div id='sp-page' class='container-fluid main-content map-back'>
 	<button ng-click="$spMenu.toggle()" class="nav-button "><i class="icon-align-justify"></i></button>
 	<div class='hero-unit cat-det'>
-	<div class='row no-top-bottom-padding'><h4>Name</h4></div>
+	<div class='row no-top-bottom-padding'><h5>Name</h5></div>
 			<div class='row cat-details no-top-bottom-padding'><i class="icon-home"></i></span>  {{placeDetail.name}}</div>
 		<div class='row'></div>
 			<div class='row cat-details'><img ng-src="{{placeDetail.picture}}" class="img-rounded img-det"></div>
 	<hr class="carved"/>
-		<div class='row no-top-bottom-padding'><h4>Opening Hours</h4></div>
+		<div class='row no-top-bottom-padding'><h5>Opening Hours</h5></div>
 			<div class='row cat-details no-top-bottom-padding'><i class="icon-time"></i>  {{placeDetail.opening_hours}}</div>
 	<hr class="carved"/>
-		<div class='row no-top-bottom-padding'><h4>Address</h4></div>
+		<div class='row no-top-bottom-padding'><h5>Address</h5></div>
 			<div class='row cat-details no-top-bottom-padding'><i class="icon-envelope"></i>  {{placeDetail.location}}</div>
 	<hr class="carved"/>
-		<div class='row no-top-bottom-padding'><h4>Price Range</h4></div>
+		<div class='row no-top-bottom-padding'><h5>Price Range</h5></div>
 			<div class='row cat-details no-top-bottom-padding'><i class="icon-tag"></i>  {{placeDetail.price_range}}</div>
 	<hr class="carved"/>
-		<div class='row no-top-bottom-padding'><h4>Description</h4></div>
+		<div class='row no-top-bottom-padding'><h5>Description</h5></div>
 			<div class='row cat-details no-top-bottom-padding'><i class="icon-list-alt"></i>  {{placeDetail.description}}</div>
 	<hr class="carved"/>
-		<div class='row no-top-bottom-padding'><h4>Maps</h4></div>
+		<div class='row no-top-bottom-padding'><h5>Maps</h5></div>
 			<div class='row cat-details no-top-bottom-padding'>
 			<a href="#/maps/"><btn class="btn"><i class="icon-map-marker"></i> Locate in maps</btn></a>
 			<a href="#/maps/{{placeDetail.latitude}}/{{placeDetail.longitude}}/navigate"><btn class="btn"><i class="icon-screenshot"></i> Navigate here</btn></a>
