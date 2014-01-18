@@ -41,7 +41,7 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', ['$scope', '$routePa
         $scope.markers.push({ // adding marker on ur current location
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
-          infoWindow: '<i class="icon-info-sign"></i>  You are here!',
+          infoWindow: 'You are here!',
           icon: 'img/markers/you.png'
         });
 
@@ -57,7 +57,7 @@ angular.module('halamanHeritageApp').controller('MapsCtrl', ['$scope', '$routePa
 
         $scope.$apply();
       }, function () {
-        alert("Please enable GPS and share location to fully utilize this web application.");
+        alert("Please enable GPS and share location to fully utilize this web application");
       });
     };
 }]);
