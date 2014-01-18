@@ -31,9 +31,10 @@ var services = angular.module('halamanHeritageApp')
 															myData.markers.push({
 																latitude: place.latitude,
 																longitude: place.longitude,
-																infoWindow: '<h3>' + place.name + '</h3>' +
-																						'<p><a class="btn" href="#/category/' + name + '/' + place.id + '/details">More details</a>' +
-																						'<a class="btn" href="#/maps/' + place.latitude + '/' + place.longitude +  '/navigate">Navigate Here</a></p>', //TODO implement navigation!
+                                // CONTENT of INFOWINDOW
+																infoWindow: '<h4><i class="icon-globe icon-white"></i>' + place.name + '</h4>' +
+																						'<p><a class="btn" href="#/category/' + name + '/' + place.id + '/details"><i class="icon-align-left"></i> More Details</a>' +
+																						'<a class="btn" href="#/maps/' + place.latitude + '/' + place.longitude +  '/navigate"><i class="icon-screenshot"></i> Get Here</a></p>', //TODO implement navigation!
 																icon: 'img/markers/' + name + '.png'
 															});
 														});
